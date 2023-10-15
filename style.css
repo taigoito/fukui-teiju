@@ -61,6 +61,14 @@ button, input, select, textarea {
 /*
  * Hero
  */
+.hero {
+  height: 100vh;
+  background: url("./assets/main.jpg") no-repeat 50% 50%/cover scroll;
+}
+.hero__inner {
+  height: 100%;
+}
+
 /*
  * News
  */
