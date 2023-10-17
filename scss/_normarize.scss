@@ -9,7 +9,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: var(--root-font-size);
 
   @media (max-width: breakpoint("sm") - 0.1px) {
     font-size: 3.84vw;
@@ -18,8 +18,8 @@ html {
  
 body {
   margin: 0; // Remove the margin in all browsers
-  background-color: $bodyBg;
-  color: $bodyColor;
+  background-color: var(--background-color-1);
+  color: var(--foreground-color);
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: 400;
   line-height: 1.8;
@@ -27,7 +27,7 @@ body {
 }
 
 a {
-  color: $bodyColor;
+  color: var(--foreground-color);
   text-decoration: none;
 }
 

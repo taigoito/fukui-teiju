@@ -1,4 +1,14 @@
 /**
+ * Variables
+ */
+:root {
+  --background-color-1: #faf9f2;
+  --background-color-2: #fef3e6;
+  --foreground-color: #242424;
+  --root-font-size: 16px;
+}
+
+/**
  * Normarize
  */
 *,
@@ -8,7 +18,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: var(--root-font-size);
 }
 @media (max-width: 599.9px) {
   html {
@@ -18,8 +28,8 @@ html {
 
 body {
   margin: 0;
-  background-color: #ffffff;
-  color: #333333;
+  background-color: var(--background-color-1);
+  color: var(--foreground-color);
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 400;
   line-height: 1.8;
@@ -27,7 +37,7 @@ body {
 }
 
 a {
-  color: #333333;
+  color: var(--foreground-color);
   text-decoration: none;
 }
 
@@ -152,6 +162,7 @@ button, input, select, textarea {
   padding: 1.5rem;
   border-radius: 0.75rem;
   background-color: #ffffff;
+  color: #242424;
   font-weight: 700;
 }
 .support-work__listItem a:hover, .support-childcare__listItem a:hover, .support-live__listItem a:hover {
@@ -163,11 +174,64 @@ button, input, select, textarea {
  * Hero
  */
 .hero {
+  position: relative;
   height: 100vh;
   background: url("./assets/main.jpg") no-repeat 50% 50%/cover scroll;
 }
-.hero__inner {
-  height: 100%;
+
+/*
+ * Control panel
+ */
+.controlpanel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1.5rem;
+  border-radius: 0 0 0 0.75rem;
+  background-color: var(--background-color-1);
+}
+.controlpanel__controllers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.controlpanel__controller {
+  display: inline-block;
+  margin: 0.75rem;
+  font-weight: 700;
+  font-size: 87.5%;
+}
+.controlpanel__span::before {
+  content: "";
+  display: inline-block;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-right: 6px;
+  vertical-align: sub;
+}
+.controlpanel__span.--speaker::before {
+  background: url("./assets/icon_speaker.svg") no-repeat 50% 50%/contain scroll;
+}
+.controlpanel__span.--fontsize::before {
+  background: url("./assets/icon_fontsize.svg") no-repeat 50% 50%/contain scroll;
+}
+.controlpanel__span.--color::before {
+  background: url("./assets/icon_color.svg") no-repeat 50% 50%/contain scroll;
+}
+.controlpanel__button {
+  display: inline-block;
+  padding: 0 6px;
+  border: 1px solid var(--foreground-color);
+  border-radius: 3px;
+}
+.controlpanel__button.--fontsize_reguler, .controlpanel__button.--color_dark {
+  background-color: var(--foreground-color);
+  color: var(--background-color-1);
+}
+.controlpanel__button.--color_vivid {
+  border-color: blue;
+  background-color: blue;
+  color: yellow;
 }
 
 /*
@@ -180,7 +244,7 @@ button, input, select, textarea {
  * Support live
  */
 .support-live {
-  background-color: #fef3e6;
+  background-color: var(--background-color-2);
 }
 .support-live__image {
   right: 0;
@@ -188,9 +252,6 @@ button, input, select, textarea {
 /*
  * Support child care
  */
-.support-childcare {
-  background-color: #faf9f2;
-}
 .support-childcare__image {
   left: 0;
 }
@@ -201,7 +262,7 @@ button, input, select, textarea {
  * Support work
  */
 .support-work {
-  background-color: #fef3e6;
+  background-color: var(--background-color-2);
 }
 .support-work__image {
   right: 0;

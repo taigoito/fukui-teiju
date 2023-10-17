@@ -12,8 +12,23 @@
   </head>
   <body>
     <header id="hero" class="hero">
-      <div class="hero__inner">
-
+      <div class="controlpanel">
+        <ul class="controlpanel__controllers">
+          <li class="controlpanel__controller">
+            <a href="#" id="btnSpeaker" class="controlpanel__span --speaker">音声読み上げ</a>
+          </li>
+          <li class="controlpanel__controller">
+            <span class="controlpanel__span --fontsize">文字サイズ</span>
+            <a href="#" id="btnFontsizeReguler" class="controlpanel__button --fontsize_reguler">標準</a>
+            <a href="#" id="btnFontsizeLarge" class="controlpanel__button --fontsize_large">拡大</a>
+          </li>
+          <li class="controlpanel__controller">
+            <span class="controlpanel__span --color">文字色・背景色</span>
+            <a href="#" id="btnColorLight" class="controlpanel__button --color_light">黒</a>
+            <a href="#" id="btnColorDark" class="controlpanel__button --color_dark">白</a>
+            <a href="#" id="btnColorVivid" class="controlpanel__button --color_vivid">黄</a>
+          </li>
+        </ul>
       </div>
     </header>
     <main>
@@ -147,5 +162,7 @@
 
       </div>
     </footer>
+    <script src="./js/_textController.js"></script>
+    <script src="./js/init.js"></script>
   </body>
 </html>

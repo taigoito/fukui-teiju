@@ -3,11 +3,7 @@
  */
 
 .hero {
+  position: relative;
   height: 100vh;
   background: url("./assets/main.jpg") no-repeat 50% 50% / cover scroll;
-
-  &__inner {
-    height: 100%;
-  }
-
 }

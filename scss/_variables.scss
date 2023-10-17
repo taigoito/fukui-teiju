@@ -1,7 +1,11 @@
-// Variables
+/**
+ * Variables
+ */
 
-$bodyBg:         #ffffff;
-$bodyColor:      #333333;
+$bodyBg1:        #faf9f2;
+$bodyBg2:        #fef3e6;
+$bodyColor:      #242424;
+$themeColor:     #ed7475;
 
 $breakpoints:    (
   sm:  600px,
@@ -25,4 +29,11 @@ $spacingValues:  (
 // 余白の配列の接頭辞から値を返す関数
 @function space($key: 1) {
   @return map-get($spacingValues, $key);
+}
+
+:root {
+  --background-color-1: #{$bodyBg1};
+  --background-color-2: #{$bodyBg2};
+  --foreground-color: #{$bodyColor};
+  --root-font-size: 16px;
 }

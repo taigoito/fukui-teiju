@@ -51,7 +51,7 @@
 }
 
 %__subheading {
-  color: #ed7475;
+  color: $themeColor;
   font-weight: 400;
   font-size: 1rem;
 }
@@ -95,10 +95,11 @@
     padding: space(3);
     border-radius: space();
     background-color: #ffffff;
+    color: $bodyColor;
     font-weight: 700;
 
     &:hover {
-      background-color: #ed7475;
+      background-color: $themeColor;
       color: #ffffff;
     }
   }

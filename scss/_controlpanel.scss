@@ -1,0 +1,66 @@
+/*
+ * Control panel
+ */
+
+.controlpanel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1.5rem;
+  border-radius: 0 0 0 0.75rem;
+  background-color: var(--background-color-1);
+
+  &__controllers {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__controller {
+    display: inline-block;
+    margin: 0.75rem;
+    font-weight: 700;
+    font-size: 87.5%;
+  }
+
+  &__span {
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 1.125rem;
+      height: 1.125rem;
+      margin-right: 6px;
+      vertical-align: sub;
+    }
+
+    &.--speaker::before {
+      background: url("./assets/icon_speaker.svg") no-repeat 50% 50% / contain scroll;
+    }
+  
+    &.--fontsize::before {
+      background: url("./assets/icon_fontsize.svg") no-repeat 50% 50% / contain scroll;
+    }
+  
+    &.--color::before {
+      background: url("./assets/icon_color.svg") no-repeat 50% 50% / contain scroll;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 0 6px;
+    border: 1px solid var(--foreground-color);
+    border-radius: 3px;
+
+    &.--fontsize_reguler, &.--color_dark {
+      background-color: var(--foreground-color);
+      color: var(--background-color-1);
+    }
+
+    &.--color_vivid {
+      border-color: blue;
+      background-color: blue;
+      color: yellow;
+    }
+  }
+}

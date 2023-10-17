@@ -4,7 +4,7 @@
 
 .support-work {
   @extend %__section;
-  background-color: #fef3e6;
+  background-color: var(--background-color-2);
 
   &__image {
     @extend %__image;
