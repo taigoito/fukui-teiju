@@ -2,10 +2,48 @@
  * Support work
  */
 
-.suppot-work {
+.support-work {
+  @extend %__section;
+  background-color: #fef3e6;
 
-  &__inner {
-    
+  &__image {
+    @extend %__image;
+    right: 0
   }
 
+  &__inner {
+    @extend %__inner;  
+  }
+
+  &__content {
+    @extend %__content;
+  }
+
+  &__heading {
+    @extend %__heading;
+  }
+
+  &__subheading {
+    @extend %__subheading;
+  }
+
+  &__lead {
+    @extend %__lead;
+  }
+
+  &__intro {
+    @extend %__intro;
+  }
+
+  &__support {
+    @extend %__support;
+  }
+
+  &__list {
+    @extend %__list;
+  }
+
+  &__listItem {
+    @extend %__listItem;
+  }
 }

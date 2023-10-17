@@ -11,7 +11,7 @@
 html {
   font-size: 16px;
 
-  @media (max-width: $breakpointSm - 0.1px) {
+  @media (max-width: breakpoint("sm") - 0.1px) {
     font-size: 3.84vw;
   }
 }
@@ -20,8 +20,9 @@ body {
   margin: 0; // Remove the margin in all browsers
   background-color: $bodyBg;
   color: $bodyColor;
-  font-family: "游ゴシック", "Yu Gothic", sans-serif;
-  font-weight: 500;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
   -webkit-text-size-adjust: 100%; // Prevent adjustments of font size after orientation changes in iOS
 }
 

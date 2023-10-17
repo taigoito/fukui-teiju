@@ -3,9 +3,48 @@
  */
 
 .support-childcare {
+  @extend %__section;
+  background-color: #faf9f2;
 
-  &__inner {
-    
+  &__image {
+    @extend %__image;
+    left: 0;
   }
 
+  &__inner {
+    @extend %__inner;
+    justify-content: flex-end;
+  }
+
+  &__content {
+    @extend %__content;
+  }
+
+  &__heading {
+    @extend %__heading;
+  }
+
+  &__subheading {
+    @extend %__subheading;
+  }
+
+  &__lead {
+    @extend %__lead;
+  }
+
+  &__intro {
+    @extend %__intro;
+  }
+
+  &__support {
+    @extend %__support;
+  }
+
+  &__list {
+    @extend %__list;
+  }
+
+  &__listItem {
+    @extend %__listItem;
+  }
 }

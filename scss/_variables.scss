@@ -3,6 +3,26 @@
 $bodyBg:         #ffffff;
 $bodyColor:      #333333;
 
-$breakpointSm:   600px;
-$breakpointMd:   900px;
-$breakpointLg:   1200px;
+$breakpoints:    (
+  sm:  600px,
+  md:  900px,
+  lg:  1200px
+);
+
+$spacingValues:  (
+  1: 0.75rem,
+  2: 1.125rem,
+  3: 1.5rem,
+  4: 3rem,
+  5: 6rem
+);
+
+// BPの配列の接頭辞から値を返す関数
+@function breakpoint($key: "lg") {
+  @return map-get($breakpoints, $key);
+}
+
+// 余白の配列の接頭辞から値を返す関数
+@function space($key: 1) {
+  @return map-get($spacingValues, $key);
+}

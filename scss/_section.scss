@@ -3,11 +3,103 @@
  */
 
 %__section {
-  padding: 3rem 0;
+  position: relative;
+  padding: space(4) 0 space(5);
+}
+
+%__image {
+  display: block;
+  width: 100%;
+
+  img {
+    aspect-ratio: 2;
+    object-fit: cover;
+  }
+
+  @media (min-width: breakpoint("md")) {
+    position: absolute;
+    top: -4%;
+    width: 45%;
+
+    img {
+      aspect-ratio: 1.33;
+    }
+  }
 }
 
 %__inner {
+  display: flex;
+  flex-flow: row wrap;
   width: min(100%, 75rem); // 1200px 左右24pxずつpaddingで、内寸1152px
   margin: auto;
-  padding: 0 clamp(0.75rem, 2%, 1.5rem);
+  padding: 0 clamp(#{space()}, 2%, #{space(3)});
+}
+
+%__content {
+  flex: 0 0 100%;
+  padding: 0 space();
+
+  @media (min-width: breakpoint("md")) {
+    flex: 0 0 50%;
+    padding: 0 space(4);
+  }
+}
+
+%__heading {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+%__subheading {
+  color: #ed7475;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+%__lead {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+%__intro {
+  text-align: justify;
+
+  p {
+    margin: 0;
+  }
+}
+
+%__support {
+  flex: 0 0 100%;
+  padding: 0 space();
+
+  @media (min-width: breakpoint("md")) {
+    padding: 0 space(4);
+  }
+}
+
+%__list {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: space(3);
+  padding: 0;
+}
+
+%__listItem {
+  width: 20.25rem;
+
+  a {
+    display: block;
+    padding: space(3);
+    border-radius: space();
+    background-color: #ffffff;
+    font-weight: 700;
+
+    &:hover {
+      background-color: #ed7475;
+      color: #ffffff;
+    }
+  }
 }
