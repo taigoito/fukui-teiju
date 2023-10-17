@@ -256,12 +256,12 @@ button, input, select, textarea {
  */
 .slider {
   width: 100%;
-  height: calc(50vmin * 0.75);
+  height: calc(21rem * 0.75 + 7.5rem);
   overflow: hidden;
 }
 .slider__inner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   height: 100%;
   margin-top: 0;
   margin-bottom: 0;
@@ -279,23 +279,42 @@ button, input, select, textarea {
   opacity: 0.5;
 }
 .slider__item img {
-  width: 50vmin;
+  width: 21rem;
   aspect-ratio: 1.3333333333;
   -o-object-fit: cover;
      object-fit: cover;
   margin: 0;
   border-radius: 1.125rem;
 }
+.slider__caption {
+  width: 21rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: justify;
+  line-height: 1.44;
+}
+.slider__captionSpan1 {
+  color: #b3a98a;
+  font-size: 0.8rem;
+}
+.slider__captionSpan2 {
+  font-size: 0.8rem;
+}
 .slider__nav {
   list-style: none;
   position: absolute;
   top: 6rem;
   right: 12.5%;
-  display: flex;
+  display: none;
   justify-content: center;
   height: 1rem;
   margin: 1.125rem auto;
   padding: 0;
+}
+@media (min-width: 900px) {
+  .slider__nav {
+    display: flex;
+  }
 }
 .slider__navItem {
   width: 0.5rem;

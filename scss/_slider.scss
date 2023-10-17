@@ -9,13 +9,13 @@
 .slider {
   //position: relative;
   width: 100%;
-  height: calc(50vmin * #{$sliderAspectRatio});
+  height: calc(21rem * #{$sliderAspectRatio} + 7.5rem);
   overflow: hidden;
   
   // gapはJSで指定
   &__inner {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
     margin-top: 0;
     margin-bottom: 0;
@@ -35,12 +35,29 @@
     }
 
     img {
-      width: 50vmin;
+      width: 21rem;
       aspect-ratio: 1 / $sliderAspectRatio;
       object-fit: cover;
       margin: 0;
       border-radius: space(2);
     }
+  }
+
+  &__caption {
+    width: 21rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.44;
+  }
+
+  &__captionSpan1 {
+    color: #b3a98a;
+    font-size: 0.8rem;
+  }
+
+  &__captionSpan2 {
+    font-size: 0.8rem;
   }
   
   &__nav {
@@ -48,11 +65,15 @@
     position: absolute;
     top: 6rem;
     right: 12.5%;
-    display: flex;
+    display: none;
     justify-content: center;
     height: 1rem;
     margin: space(2) auto;
     padding: 0;
+
+    @media (min-width: breakpoint("md")) {
+      display: flex;
+    }
   }
 
   &__navItem {
