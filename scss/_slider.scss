@@ -1,0 +1,70 @@
+/**
+ * Component - Slider
+ */
+
+ $sliderAspectRatio: 3 / 4;
+ $primary:           $bodyColor;
+ $primaryLight:      lighten($primary, 75%);
+
+.slider {
+  //position: relative;
+  width: 100%;
+  height: calc(50vmin * #{$sliderAspectRatio});
+  overflow: hidden;
+  
+  // gapはJSで指定
+  &__inner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    transform: translateX(0);
+  }
+
+  &__item {
+    position: relative;
+    flex: 0 1 auto; 
+    order: 0;
+    margin: 0;
+    opacity: 1;
+    transition: opacity 0.15s linear;
+    
+    &:not(.--current) {
+      opacity: .5;
+    }
+
+    img {
+      width: 50vmin;
+      aspect-ratio: 1 / $sliderAspectRatio;
+      object-fit: cover;
+      margin: 0;
+      border-radius: space(2);
+    }
+  }
+  
+  &__nav {
+    list-style: none;
+    position: absolute;
+    top: 6rem;
+    right: 12.5%;
+    display: flex;
+    justify-content: center;
+    height: 1rem;
+    margin: space(2) auto;
+    padding: 0;
+  }
+
+  &__navItem {
+    width: .5rem;
+    height: .5rem;
+    margin: space();
+    border-radius: 50%;
+    background-color: $primary;
+    cursor: pointer;
+
+    &:not(.--current) {
+      background-color: $primaryLight;
+    }
+  }
+}

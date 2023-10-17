@@ -3,9 +3,12 @@
  */
 
 .interview {
+  position: relative;
+  padding: space(5) 0 space(6);
 
-  &__inner {
-    
+  &__heading {
+    @extend %__container;
+    margin-bottom: space(4);
   }
 
 }

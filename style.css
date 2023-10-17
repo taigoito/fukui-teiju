@@ -93,12 +93,15 @@ button, input, select, textarea {
   }
 }
 
-.support-work__inner, .support-childcare__inner, .support-live__inner {
-  display: flex;
-  flex-flow: row wrap;
+.interview__heading, .support-work__inner, .support-childcare__inner, .support-live__inner {
   width: min(100%, 75rem);
   margin: auto;
   padding: 0 clamp(0.75rem, 2%, 1.5rem);
+}
+
+.support-work__inner, .support-childcare__inner, .support-live__inner {
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .support-work__content, .support-childcare__content, .support-live__content {
@@ -240,6 +243,72 @@ button, input, select, textarea {
 /*
  * Interview
  */
+.interview {
+  position: relative;
+  padding: 6rem 0 12rem;
+}
+.interview__heading {
+  margin-bottom: 3rem;
+}
+
+/**
+ * Component - Slider
+ */
+.slider {
+  width: 100%;
+  height: calc(50vmin * 0.75);
+  overflow: hidden;
+}
+.slider__inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  transform: translateX(0);
+}
+.slider__item {
+  position: relative;
+  flex: 0 1 auto;
+  order: 0;
+  margin: 0;
+  opacity: 1;
+  transition: opacity 0.15s linear;
+}
+.slider__item:not(.--current) {
+  opacity: 0.5;
+}
+.slider__item img {
+  width: 50vmin;
+  aspect-ratio: 1.3333333333;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0;
+  border-radius: 1.125rem;
+}
+.slider__nav {
+  list-style: none;
+  position: absolute;
+  top: 6rem;
+  right: 12.5%;
+  display: flex;
+  justify-content: center;
+  height: 1rem;
+  margin: 1.125rem auto;
+  padding: 0;
+}
+.slider__navItem {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0.75rem;
+  border-radius: 50%;
+  background-color: #242424;
+  cursor: pointer;
+}
+.slider__navItem:not(.--current) {
+  background-color: #e3e3e3;
+}
+
 /*
  * Support live
  */
