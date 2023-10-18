@@ -4,6 +4,9 @@
  * Location: Fukui, Japan
  */
 
+//import BackToTop from './_backToTop.js';
+new BackToTop();
+
 //import Slider from './_slider.js';
 new Slider();
 

@@ -460,6 +460,7 @@ button, input, select, textarea {
   background-color: #ffffff;
 }
 .footer__inner {
+  position: relative;
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
@@ -483,6 +484,15 @@ button, input, select, textarea {
 .footer__link {
   display: inline-block;
   margin: 0.75rem;
+}
+.footer__backToTop {
+  position: absolute;
+  top: -3rem;
+  right: 24px;
+}
+.footer__backToTop img {
+  width: auto;
+  height: 3rem;
 }
 .footer__copyright {
   padding: 0.75rem;

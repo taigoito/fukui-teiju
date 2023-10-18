@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109.66 63.81">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #666;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-4 {
+        font-family: BIZUDGothic-Bold, 'BIZ UDGothic';
+        font-size: 12.98px;
+        font-weight: 700;
+      }
+
+      .cls-4, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-7 {
+        letter-spacing: -.12em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-9 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: .75px;
+      }
+    </style>
+  </defs>
+  <g id="_レイヤー_1-2" data-name="レイヤー 1">
+    <g>
+      <g>
+        <path class="cls-1" d="m0,63.81h109.66V15c0-8.28-6.72-15-15-15H15C6.72,0,0,6.72,0,15v48.81Z"/>
+        <line class="cls-9" x1="42.24" y1="14.29" x2="67.42" y2="14.29"/>
+        <line class="cls-9" x1="54.83" y1="19.84" x2="54.83" y2="33.36"/>
+        <path class="cls-2" d="m50.51,26c.21.13.49.07.62-.14l3.7-5.81,3.7,5.81c.13.21.41.27.62.14.21-.13.27-.41.14-.62l-4.08-6.4c-.08-.13-.22-.21-.38-.21s-.3.08-.38.21l-4.08,6.4c-.05.07-.07.16-.07.24,0,.15.07.29.21.38"/>
+      </g>
+      <text class="cls-4" transform="translate(18.52 50.68)"><tspan class="cls-6" x="0" y="0">ペ</tspan><tspan class="cls-5" x="11.8" y="0">ー</tspan><tspan class="cls-8" x="24.41" y="0">ジ</tspan><tspan class="cls-7" x="36.18" y="0">ト</tspan><tspan class="cls-3" x="47.57" y="0">ッ</tspan><tspan x="59.68" y="0">プ</tspan></text>
+    </g>
+  </g>
+</svg>
