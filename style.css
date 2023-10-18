@@ -401,12 +401,20 @@ button, input, select, textarea {
   padding: 0 3rem;
   font-size: 1.5rem;
 }
-.others__projects {
+.others__projects, .others__banners, .others__contacts {
   list-style: none;
   display: flex;
   flex-flow: row wrap;
+  gap: 1.5rem;
+  padding: 0 0.75rem;
+}
+@media (min-width: 900px) {
+  .others__projects, .others__banners, .others__contacts {
+    padding: 0 3rem;
+  }
+}
+.others__projects {
   gap: 3rem;
-  padding: 0 3rem;
 }
 .others__project {
   flex: 1 1 100%;
@@ -421,13 +429,6 @@ button, input, select, textarea {
     flex: 0 1 31.5rem;
   }
 }
-.others__banners {
-  list-style: none;
-  display: flex;
-  flex-flow: row wrap;
-  gap: 1.5rem;
-  padding: 0 3rem;
-}
 .others__banner {
   flex: 1 1 100%;
 }
@@ -440,13 +441,6 @@ button, input, select, textarea {
   body:not(.--large) .others__banner {
     flex: 0 1 21rem;
   }
-}
-.others__contacts {
-  list-style: none;
-  display: flex;
-  flex-flow: row wrap;
-  gap: 1.5rem;
-  padding: 0 3rem;
 }
 .others__contact {
   flex: 1 1 100%;
@@ -505,7 +499,7 @@ button, input, select, textarea {
 }
 .footer__link {
   display: inline-block;
-  margin: 0.75rem;
+  margin: 0.75rem 1.5rem 0.75rem 0;
 }
 .footer__backToTop {
   position: absolute;
