@@ -3,9 +3,54 @@
  */
 
 .footer {
+  background-color: #ffffff;
 
   &__inner {
-    
+    @extend %__inner;
+    padding-top: space(5);
+    padding-bottom: space(5);
   }
 
+  &__heading {
+    flex: 0 0 100%;
+
+    img {
+      width: 9rem;
+    }
+  }
+
+  &__info {
+    flex: 0 0 30rem;
+
+    h4 {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__links {
+    list-style: none;
+    flex: 0 0 100%;
+    padding: 0;
+  }
+
+  &__link {
+    display: inline-block;
+    margin: 0.75rem;
+  }
+
+  &__copyinner {
+    @extend %__inner;
+  }
+
+  &__copyright {
+    padding: space();
+    background-color: $themeColor;
+    color: #ffffff;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  a:hover {
+    color: $themeColor;
+  }
 }

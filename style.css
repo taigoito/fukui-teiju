@@ -111,13 +111,13 @@ button, input, select, textarea {
   }
 }
 
-.others__inner, .interview__heading, .support-work__inner, .support-childcare__inner, .support-live__inner {
+.others__inner, .interview__heading, .footer__copyinner, .footer__inner, .support-work__inner, .support-childcare__inner, .support-live__inner {
   width: min(100%, 1200px);
   margin: auto;
   padding: 0 clamp(12px, 2%, 24px);
 }
 
-.support-work__inner, .support-childcare__inner, .support-live__inner {
+.footer__copyinner, .footer__inner, .support-work__inner, .support-childcare__inner, .support-live__inner {
   display: flex;
   flex-flow: row wrap;
 }
@@ -456,3 +456,41 @@ button, input, select, textarea {
 /*
  * Footer
  */
+.footer {
+  background-color: #ffffff;
+}
+.footer__inner {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.footer__heading {
+  flex: 0 0 100%;
+}
+.footer__heading img {
+  width: 9rem;
+}
+.footer__info {
+  flex: 0 0 30rem;
+}
+.footer__info h4 {
+  font-size: 1.5rem;
+}
+.footer__links {
+  list-style: none;
+  flex: 0 0 100%;
+  padding: 0;
+}
+.footer__link {
+  display: inline-block;
+  margin: 0.75rem;
+}
+.footer__copyright {
+  padding: 0.75rem;
+  background-color: #ed7475;
+  color: #ffffff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.footer a:hover {
+  color: #ed7475;
+}
