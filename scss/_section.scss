@@ -4,7 +4,7 @@
 
 %__section {
   position: relative;
-  padding: space(4) 0 space(5);
+  padding: 0 0 space(5);
 }
 
 %__image {
@@ -28,9 +28,9 @@
 }
 
 %__container {
-  width: min(100%, 75rem); // 1200px 左右24pxずつpaddingで、内寸1152px
+  width: $containerWidth;
   margin: auto;
-  padding: 0 clamp(#{space()}, 2%, #{space(3)});
+  padding: 0 $containerPad;
 }
 
 %__inner {
@@ -41,11 +41,11 @@
 
 %__content {
   flex: 0 0 100%;
-  padding: 0 space();
+  padding: space(4) space() 0;
 
   @media (min-width: breakpoint("md")) {
     flex: 0 0 50%;
-    padding: 0 space(4);
+    padding: space(4) space(4) 0;
   }
 }
 
@@ -93,6 +93,10 @@
 
 %__listItem {
   flex: 0 1 21rem;
+
+  .--large & {
+    flex: 0 1 calc(50% - #{space()});
+  }
 
   a {
     display: block;

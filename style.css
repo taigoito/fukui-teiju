@@ -2,10 +2,18 @@
  * Variables
  */
 :root {
-  --background-color-1: #faf9f2;
-  --background-color-2: #fef3e6;
-  --foreground-color: #242424;
-  --root-font-size: 16px;
+  --default-background-1: #faf9f2;
+  --default-background-2: #fef3e6;
+  --default-foreground: #242424;
+  --invert-background-1: #292a31;
+  --invert-background-2: #25303d;
+  --invert-foreground: #ffffff;
+  --default-font-size: clamp(12px, 1.33vw, 16px);
+  --large-font-size: clamp(15px, 1.67vw, 20px);
+  --background-color-1: var(--default-background-1);
+  --background-color-2: var(--default-background-2);
+  --foreground-color: var(--default-foreground);
+  --root-font-size: var(--default-font-size);
 }
 
 /**
@@ -68,9 +76,9 @@ button, input, select, textarea {
 /*
  * Section
  */
-.others, .support-work, .support-childcare, .support-live {
+.support-work, .support-childcare, .support-live {
   position: relative;
-  padding: 3rem 0 6rem;
+  padding: 0 0 6rem;
 }
 
 .support-work__image, .support-childcare__image, .support-live__image {
@@ -94,9 +102,9 @@ button, input, select, textarea {
 }
 
 .others__inner, .interview__heading, .support-work__inner, .support-childcare__inner, .support-live__inner {
-  width: min(100%, 75rem);
+  width: min(100%, 1200px);
   margin: auto;
-  padding: 0 clamp(0.75rem, 2%, 1.5rem);
+  padding: 0 clamp(12px, 2%, 24px);
 }
 
 .support-work__inner, .support-childcare__inner, .support-live__inner {
@@ -106,12 +114,12 @@ button, input, select, textarea {
 
 .support-work__content, .support-childcare__content, .support-live__content {
   flex: 0 0 100%;
-  padding: 0 0.75rem;
+  padding: 3rem 0.75rem 0;
 }
 @media (min-width: 900px) {
   .support-work__content, .support-childcare__content, .support-live__content {
     flex: 0 0 50%;
-    padding: 0 3rem;
+    padding: 3rem 3rem 0;
   }
 }
 
@@ -159,6 +167,9 @@ button, input, select, textarea {
 
 .support-work__listItem, .support-childcare__listItem, .support-live__listItem {
   flex: 0 1 21rem;
+}
+.--large .support-work__listItem, .--large .support-childcare__listItem, .--large .support-live__listItem {
+  flex: 0 1 calc(50% - 0.75rem);
 }
 .support-work__listItem a, .support-childcare__listItem a, .support-live__listItem a {
   display: block;
@@ -276,7 +287,7 @@ button, input, select, textarea {
   transition: opacity 0.15s linear;
 }
 .slider__item:not(.--current) {
-  opacity: 0.5;
+  opacity: 0.85;
 }
 .slider__item img {
   width: 21rem;
@@ -321,11 +332,11 @@ button, input, select, textarea {
   height: 0.5rem;
   margin: 0.75rem;
   border-radius: 50%;
-  background-color: #242424;
+  background-color: var(--foreground-color);
   cursor: pointer;
 }
 .slider__navItem:not(.--current) {
-  background-color: #e3e3e3;
+  background-color: #999999;
 }
 
 /*
@@ -358,7 +369,11 @@ button, input, select, textarea {
 /*
  * Others
  */
+.others {
+  padding: 6rem 0;
+}
 .others__heading {
+  margin: 3rem 0 1.5rem;
   padding: 0 3rem;
   font-size: 1.5rem;
 }
@@ -372,6 +387,9 @@ button, input, select, textarea {
 .others__project {
   flex: 0 1 31.5rem;
 }
+.--large .others__project {
+  flex: 0 1 calc(50% - 1.5rem);
+}
 .others__banners {
   list-style: none;
   display: flex;
@@ -382,6 +400,9 @@ button, input, select, textarea {
 .others__banner {
   flex: 0 1 21rem;
 }
+.--large .others__banner {
+  flex: 0 1 calc(50% - 0.75rem);
+}
 .others__contacts {
   list-style: none;
   display: flex;
@@ -391,6 +412,21 @@ button, input, select, textarea {
 }
 .others__contact {
   flex: 0 1 31.5rem;
+}
+.--large .others__contact {
+  flex: 0 1 calc(50% - 0.75rem);
+}
+.others__contact a {
+  display: block;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  color: #242424;
+  font-weight: 700;
+}
+.others__contact a:hover {
+  background-color: #ed7475;
+  color: #ffffff;
 }
 
 /*

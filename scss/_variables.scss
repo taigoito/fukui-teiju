@@ -5,6 +5,9 @@
 $bodyBg1:        #faf9f2;
 $bodyBg2:        #fef3e6;
 $bodyColor:      #242424;
+$invertBg1:      #292a31;
+$invertBg2:      #25303d;
+$invertColor:    #ffffff;
 $themeColor:     #ed7475;
 
 $breakpoints:    (
@@ -32,9 +35,22 @@ $spacingValues:  (
   @return map-get($spacingValues, $key);
 }
 
+$defaultFontsize:  clamp(12px, 1.33vw, 16px);
+$largeFontsize:    clamp(15px, 1.67vw, 20px);
+$containerWidth:   min(100%, 1200px); // 左右24pxずつpaddingで、内寸1152px
+$containerPad:     clamp(12px, 2%, 24px);
+
 :root {
-  --background-color-1: #{$bodyBg1};
-  --background-color-2: #{$bodyBg2};
-  --foreground-color: #{$bodyColor};
-  --root-font-size: 16px;
+  --default-background-1: #{$bodyBg1};
+  --default-background-2: #{$bodyBg2};
+  --default-foreground: #{$bodyColor};
+  --invert-background-1: #{$invertBg1};
+  --invert-background-2: #{$invertBg2};
+  --invert-foreground: #{$invertColor};
+  --default-font-size: #{$defaultFontsize};
+  --large-font-size: #{$largeFontsize};
+  --background-color-1: var(--default-background-1);
+  --background-color-2: var(--default-background-2);
+  --foreground-color: var(--default-foreground);
+  --root-font-size: var(--default-font-size);
 }

@@ -3,8 +3,8 @@
  */
 
  $sliderAspectRatio: 3 / 4;
- $primary:           $bodyColor;
- $primaryLight:      lighten($primary, 75%);
+ $primary:           var(--foreground-color);
+ $primaryLight:      #999999;
 
 .slider {
   //position: relative;
@@ -31,7 +31,7 @@
     transition: opacity 0.15s linear;
     
     &:not(.--current) {
-      opacity: .5;
+      opacity: .85;
     }
 
     img {

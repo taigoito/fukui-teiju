@@ -3,14 +3,15 @@
  */
 
 .others {
-  @extend %__section;
+  padding: space(5) 0;
 
   &__inner {
     @extend %__container;
   }
 
   &__heading {
-    padding: 0 3rem;
+    margin: space(4) 0 space(3);
+    padding: 0 space(4);
     font-size: 1.5rem;
   }
 
@@ -24,6 +25,10 @@
 
   &__project {
     flex: 0 1 31.5rem;
+
+    .--large & {
+      flex: 0 1 calc(50% - #{space(3)});
+    }
   }
 
   &__banners {
@@ -36,6 +41,10 @@
 
   &__banner {
     flex: 0 1 21rem;
+
+    .--large & {
+      flex: 0 1 calc(50% - #{space()});
+    }
   }
 
   &__contacts {
@@ -48,6 +57,24 @@
 
   &__contact {
     flex: 0 1 31.5rem;
+
+    .--large & {
+      flex: 0 1 calc(50% - #{space()});
+    }
+
+    a {
+      display: block;
+      padding: space(3);
+      border-radius: space();
+      background-color: #ffffff;
+      color: $bodyColor;
+      font-weight: 700;
+
+      &:hover {
+        background-color: $themeColor;
+        color: #ffffff;
+      }
+    }
   }
 
 }

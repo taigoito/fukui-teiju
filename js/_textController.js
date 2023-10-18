@@ -23,26 +23,28 @@ class TextController {
   _handleEvents() {
     this._btnFontsizeReguler.addEventListener('click', (event) => {
       event.preventDefault();
-      document.documentElement.style.setProperty('--root-font-size', '16px');
+      document.documentElement.style.setProperty('--root-font-size', 'var(--default-font-size)');
+      document.body.classList.remove('--large');
     });
 
     this._btnFontsizeLarge.addEventListener('click', (event) => {
       event.preventDefault();
-      document.documentElement.style.setProperty('--root-font-size', '18px');
+      document.documentElement.style.setProperty('--root-font-size', 'var(--large-font-size)');
+      document.body.classList.add('--large');
     });
 
     this._btnColorLight.addEventListener('click', (event) => {
       event.preventDefault();
-      document.documentElement.style.setProperty('--background-color-1', '#faf9f2');
-      document.documentElement.style.setProperty('--background-color-2', '#fef3e6');
-      document.documentElement.style.setProperty('--foreground-color', '#242424');
+      document.documentElement.style.setProperty('--background-color-1', 'var(--default-background-1)');
+      document.documentElement.style.setProperty('--background-color-2', 'var(--default-background-2)');
+      document.documentElement.style.setProperty('--foreground-color', 'var(--default-foreground)');
     });
 
     this._btnColorDark.addEventListener('click', (event) => {
       event.preventDefault();
-      document.documentElement.style.setProperty('--background-color-1', '#292a31');
-      document.documentElement.style.setProperty('--background-color-2', '#25303d');
-      document.documentElement.style.setProperty('--foreground-color', '#ffffff');
+      document.documentElement.style.setProperty('--background-color-1', 'var(--invert-background-1)');
+      document.documentElement.style.setProperty('--background-color-2', 'var(--invert-background-2)');
+      document.documentElement.style.setProperty('--foreground-color', 'var(--invert-foreground)');
     });
 
     this._btnColorVivid.addEventListener('click', (event) => {
