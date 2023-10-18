@@ -217,6 +217,7 @@ button, input, select, textarea {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 900;
   display: none;
   padding: 0 1.5rem;
   border-radius: 0 0 0 0.75rem;
@@ -478,6 +479,7 @@ button, input, select, textarea {
  */
 .footer {
   background-color: #ffffff;
+  color: var(--default-foreground);
 }
 .footer__inner {
   position: relative;
@@ -491,10 +493,10 @@ button, input, select, textarea {
   width: 9rem;
 }
 .footer__info {
-  flex: 0 0 30rem;
+  flex: 0 0 24rem;
 }
 .footer__info h4 {
-  font-size: 1.5rem;
+  font-size: 1.33rem;
 }
 .footer__links {
   list-style: none;
@@ -520,6 +522,9 @@ button, input, select, textarea {
   color: #ffffff;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+.footer a {
+  color: var(--default-foreground);
 }
 .footer a:hover {
   color: #ed7475;

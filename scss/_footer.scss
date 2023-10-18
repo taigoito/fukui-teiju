@@ -4,6 +4,7 @@
 
 .footer {
   background-color: #ffffff;
+  color: var(--default-foreground);
 
   &__inner {
     @extend %__inner;
@@ -21,10 +22,10 @@
   }
 
   &__info {
-    flex: 0 0 30rem;
+    flex: 0 0 24rem;
 
     h4 {
-      font-size: 1.5rem;
+      font-size: 1.33rem;
     }
   }
 
@@ -62,7 +63,11 @@
     text-transform: uppercase;
   }
 
-  a:hover {
-    color: $themeColor;
+  a {
+    color: var(--default-foreground);
+
+    &:hover {
+      color: $themeColor;
+    }
   }
 }
