@@ -6,9 +6,14 @@
   position: absolute;
   top: 0;
   right: 0;
+  display: none;
   padding: 0 1.5rem;
   border-radius: 0 0 0 0.75rem;
   background-color: var(--background-color-1);
+
+  @media (min-width: breakpoint("lg")) {
+    display: block;
+  }
 
   &__controllers {
     list-style: none;

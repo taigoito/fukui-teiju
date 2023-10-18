@@ -26,11 +26,21 @@
 }
 
 html {
-  font-size: var(--root-font-size);
+  font-size: 3.84vw;
 }
-@media (max-width: 599.9px) {
+@media (min-width: 600px) {
   html {
-    font-size: 3.84vw;
+    font-size: 16px;
+  }
+}
+@media (min-width: 900px) {
+  html {
+    font-size: var(--large-font-size);
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: var(--root-font-size);
   }
 }
 
@@ -166,10 +176,12 @@ button, input, select, textarea {
 }
 
 .support-work__listItem, .support-childcare__listItem, .support-live__listItem {
-  flex: 0 1 21rem;
-}
-.--large .support-work__listItem, .--large .support-childcare__listItem, .--large .support-live__listItem {
   flex: 0 1 calc(50% - 0.75rem);
+}
+@media (min-width: 1200px) {
+  body:not(.--large) .support-work__listItem, body:not(.--large) .support-childcare__listItem, body:not(.--large) .support-live__listItem {
+    flex: 0 1 21rem;
+  }
 }
 .support-work__listItem a, .support-childcare__listItem a, .support-live__listItem a {
   display: block;
@@ -200,9 +212,15 @@ button, input, select, textarea {
   position: absolute;
   top: 0;
   right: 0;
+  display: none;
   padding: 0 1.5rem;
   border-radius: 0 0 0 0.75rem;
   background-color: var(--background-color-1);
+}
+@media (min-width: 1200px) {
+  .controlpanel {
+    display: block;
+  }
 }
 .controlpanel__controllers {
   list-style: none;
@@ -385,10 +403,12 @@ button, input, select, textarea {
   padding: 0 3rem;
 }
 .others__project {
-  flex: 0 1 31.5rem;
-}
-.--large .others__project {
   flex: 0 1 calc(50% - 1.5rem);
+}
+@media (min-width: 1200px) {
+  body:not(.--large) .others__project {
+    flex: 0 1 31.5rem;
+  }
 }
 .others__banners {
   list-style: none;
@@ -398,10 +418,12 @@ button, input, select, textarea {
   padding: 0 3rem;
 }
 .others__banner {
-  flex: 0 1 21rem;
-}
-.--large .others__banner {
   flex: 0 1 calc(50% - 0.75rem);
+}
+@media (min-width: 1200px) {
+  body:not(.--large) .others__banner {
+    flex: 0 1 21rem;
+  }
 }
 .others__contacts {
   list-style: none;
@@ -411,10 +433,12 @@ button, input, select, textarea {
   padding: 0 3rem;
 }
 .others__contact {
-  flex: 0 1 31.5rem;
-}
-.--large .others__contact {
   flex: 0 1 calc(50% - 0.75rem);
+}
+@media (min-width: 1200px) {
+  body:not(.--large) .others__contact {
+    flex: 0 1 31.5rem;
+  }
 }
 .others__contact a {
   display: block;

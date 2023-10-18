@@ -9,10 +9,18 @@
 }
 
 html {
-  font-size: var(--root-font-size);
+  font-size: 3.84vw;
 
-  @media (max-width: breakpoint("sm") - 0.1px) {
-    font-size: 3.84vw;
+  @media (min-width: breakpoint("sm")) {
+    font-size: 16px;
+  }
+
+  @media (min-width: breakpoint("md")) {
+    font-size: var(--large-font-size);
+  }
+
+  @media (min-width: breakpoint("lg")) {
+    font-size: var(--root-font-size);
   }
 }
  

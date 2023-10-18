@@ -24,10 +24,12 @@
   }
 
   &__project {
-    flex: 0 1 31.5rem;
+    flex: 0 1 calc(50% - #{space(3)});
 
-    .--large & {
-      flex: 0 1 calc(50% - #{space(3)});
+    @media (min-width: breakpoint("lg")) {
+      body:not(.--large) & {
+        flex: 0 1 31.5rem;
+      }
     }
   }
 
@@ -40,10 +42,12 @@
   }
 
   &__banner {
-    flex: 0 1 21rem;
+    flex: 0 1 calc(50% - #{space()});
 
-    .--large & {
-      flex: 0 1 calc(50% - #{space()});
+    @media (min-width: breakpoint("lg")) {
+      body:not(.--large) & {
+        flex: 0 1 21rem;
+      }
     }
   }
 
@@ -56,10 +60,12 @@
   }
 
   &__contact {
-    flex: 0 1 31.5rem;
+    flex: 0 1 calc(50% - #{space()});
 
-    .--large & {
-      flex: 0 1 calc(50% - #{space()});
+    @media (min-width: breakpoint("lg")) {
+      body:not(.--large) & {
+        flex: 0 1 31.5rem;
+      }
     }
 
     a {

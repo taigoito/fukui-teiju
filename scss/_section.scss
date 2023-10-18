@@ -92,10 +92,12 @@
 }
 
 %__listItem {
-  flex: 0 1 21rem;
+  flex: 0 1 calc(50% - #{space()});
 
-  .--large & {
-    flex: 0 1 calc(50% - #{space()});
+  @media (min-width: breakpoint("lg")) {
+    body:not(.--large) & {
+      flex: 0 1 21rem;
+    }
   }
 
   a {
