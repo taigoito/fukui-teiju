@@ -176,7 +176,12 @@ button, input, select, textarea {
 }
 
 .support-work__listItem, .support-childcare__listItem, .support-live__listItem {
-  flex: 0 1 calc(50% - 0.75rem);
+  flex: 1 1 100%;
+}
+@media (min-width: 900px) {
+  .support-work__listItem, .support-childcare__listItem, .support-live__listItem {
+    flex: 0 1 calc(50% - 0.75rem);
+  }
 }
 @media (min-width: 1200px) {
   body:not(.--large) .support-work__listItem, body:not(.--large) .support-childcare__listItem, body:not(.--large) .support-live__listItem {
@@ -403,7 +408,12 @@ button, input, select, textarea {
   padding: 0 3rem;
 }
 .others__project {
-  flex: 0 1 calc(50% - 1.5rem);
+  flex: 1 1 100%;
+}
+@media (min-width: 900px) {
+  .others__project {
+    flex: 0 1 calc(50% - 1.5rem);
+  }
 }
 @media (min-width: 1200px) {
   body:not(.--large) .others__project {
@@ -418,7 +428,12 @@ button, input, select, textarea {
   padding: 0 3rem;
 }
 .others__banner {
-  flex: 0 1 calc(50% - 0.75rem);
+  flex: 1 1 100%;
+}
+@media (min-width: 900px) {
+  .others__banner {
+    flex: 0 1 calc(50% - 0.75rem);
+  }
 }
 @media (min-width: 1200px) {
   body:not(.--large) .others__banner {
@@ -433,7 +448,12 @@ button, input, select, textarea {
   padding: 0 3rem;
 }
 .others__contact {
-  flex: 0 1 calc(50% - 0.75rem);
+  flex: 1 1 100%;
+}
+@media (min-width: 900px) {
+  .others__contact {
+    flex: 0 1 calc(50% - 0.75rem);
+  }
 }
 @media (min-width: 1200px) {
   body:not(.--large) .others__contact {

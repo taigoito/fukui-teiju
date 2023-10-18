@@ -24,7 +24,11 @@
   }
 
   &__project {
-    flex: 0 1 calc(50% - #{space(3)});
+    flex: 1 1 100%;
+
+    @media (min-width: breakpoint("md")) {
+      flex: 0 1 calc(50% - #{space(3)});
+    }
 
     @media (min-width: breakpoint("lg")) {
       body:not(.--large) & {
@@ -42,7 +46,11 @@
   }
 
   &__banner {
-    flex: 0 1 calc(50% - #{space()});
+    flex: 1 1 100%;
+
+    @media (min-width: breakpoint("md")) {
+      flex: 0 1 calc(50% - #{space()});
+    }
 
     @media (min-width: breakpoint("lg")) {
       body:not(.--large) & {
@@ -60,7 +68,11 @@
   }
 
   &__contact {
-    flex: 0 1 calc(50% - #{space()});
+    flex: 1 1 100%;
+
+    @media (min-width: breakpoint("md")) {
+      flex: 0 1 calc(50% - #{space()});
+    }
 
     @media (min-width: breakpoint("lg")) {
       body:not(.--large) & {
