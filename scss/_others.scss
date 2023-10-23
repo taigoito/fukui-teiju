@@ -78,9 +78,23 @@
       color: $bodyColor;
       font-weight: 700;
 
+      &::after {
+        content: "";
+        float: right;
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        margin: 0.375rem 0;
+        background: url("./assets/icon_more.svg") no-repeat 50% 50% /contain scroll;
+      }
+
       &:hover {
         background-color: $themeColor;
         color: #ffffff;
+
+        &::after {
+          background: url("./assets/icon_more_hover.svg") no-repeat 50% 50% /contain scroll;
+        }
       }
     }
   }

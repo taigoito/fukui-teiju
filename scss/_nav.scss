@@ -1,0 +1,132 @@
+/*
+ * Nav
+ */
+
+.nav {
+  &__sitebrand {
+    width: 9rem;
+    margin: 0 auto space(3);
+  }
+
+  &__heading {
+    color: $themeColor;
+    font-size: 0.75rem;
+  }
+
+  &__subHeading {
+    margin: space(3) 0 space();
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.875rem;
+  }
+
+  &__mainMenu, &__subMenu {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__mainMenu {
+
+  }
+
+  &__subMenu {
+
+  }
+
+  &__mainMenuItem, &__subMenuItem {
+    a {
+      display: block;
+
+      &::after {
+        content: "";
+        float: right;
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        margin: 0.1875rem 0;
+        background: url("./assets/icon_more.svg") no-repeat 50% 50% /contain scroll;
+      }
+    }
+  }
+
+  &__mainMenuItem {
+    margin-bottom: space();
+
+    a {
+      color: var(--default-foreground);
+      font-weight: 700;
+      font-size: 0.875rem;
+
+      &::after {
+        background: url("./assets/icon_more.svg") no-repeat 50% 50% /contain scroll;
+      }
+
+      &:hover {
+        color: $themeColor;
+
+        &::after {
+          background: url("./assets/icon_more_hover2.svg") no-repeat 50% 50% /contain scroll;
+        }
+      }
+    }
+  }
+
+  &__subMenuItem {
+    margin-bottom: #{space() / 2};
+
+    a {
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 0.75rem;
+
+      &::after {
+        background: url("./assets/icon_more_hover.svg") no-repeat 50% 50% /contain scroll;
+      }
+
+      &:hover {
+        color: #e2e1cc;
+
+        &::after {
+          background: url("./assets/icon_more.svg") no-repeat 50% 50% /contain scroll;
+        }
+      }
+    }
+  }
+
+  &__subMenuWrap {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    bottom: 0;
+    z-index: 1000;
+    display: none;
+    width: 16.5rem;
+    height: calc(100% - space(5));
+    margin: auto;
+    padding: space() #{space(3) + space()} #{space(3) + space()};
+    border-radius: 0 space(3) space(3) 0;
+    background-color: $themeColor;
+
+    &:not(.--collapse) {
+      display: block;
+    }
+  }
+
+  &__button {
+    display: block;
+    width: 10.5rem;
+    margin: space(3) auto 0;
+    padding: space();
+    border-radius: space(3);
+    background: linear-gradient(90deg, #f3a8a1, #{$themeColor});
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 1;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}

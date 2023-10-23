@@ -5,10 +5,25 @@
 .hero {
   position: relative;
   width: 100%;
-  aspect-ratio: 1.6;
+  height: 62.5vw;
   background: url("./assets/main.jpg") no-repeat 50% 50% / cover scroll;
 
   @media (min-width: breakpoint("md")) {
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
+    padding: #{space(3) + space()};
+  }
+
+  &__nav {
+    position: relative;
+    display: none;
+    width: 15rem;
+    padding: #{space(3) + space()};
+    border-radius: space(3);
+    background-color: #ffffff;
+
+    @media (min-width: breakpoint("md")) {
+      display: block;
+    }
   }
 }
