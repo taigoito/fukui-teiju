@@ -26,4 +26,15 @@
       display: block;
     }
   }
+
+  &__sitebrand {
+    width: 9rem;
+    margin: 0 auto space(3);
+  }
+
+  &__navheading {
+    padding: 0 #{space(3) + space()};
+    color: $themeColor;
+    font-size: 0.75rem;
+  }
 }

@@ -238,26 +238,24 @@ button, input, select, textarea {
     display: block;
   }
 }
-
-/*
- * Nav
- */
-.nav__sitebrand {
+.hero__sitebrand {
   width: 9rem;
   margin: 0 auto 1.5rem;
 }
-.nav__heading {
+.hero__navheading {
   padding: 0 2.25rem;
   color: #ed7475;
   font-size: 0.75rem;
 }
-.nav__subHeading {
-  margin: 1.5rem 0 0.75rem;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 0.875rem;
+
+/*
+ * Nav
+ */
+.nav {
+  list-style: none;
+  padding: 0;
 }
-.nav__mainMenu, .nav__subMenu {
+.nav__subMenu {
   list-style: none;
   padding: 0;
 }
@@ -334,6 +332,12 @@ button, input, select, textarea {
 .nav__subMenuInner:not(.--collapse) {
   opacity: 1;
   transition: opacity ease-in-out 0.15s 0.2s;
+}
+.nav__subHeading {
+  margin: 1.5rem 0 0.75rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.875rem;
 }
 .nav__button {
   display: block;

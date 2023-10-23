@@ -38,7 +38,7 @@ class MainMenu {
   _handleEvents() {
     //const myTouch = 'ontouchend' in document && window.innerWidth < 1024 ? 'touchend' : 'click';
     const myTouch = 'click';
-    const togglers = document.querySelectorAll('[data-toggle="submenu"]');
+    const togglers = this._elem.querySelectorAll('[data-toggle="submenu"]');
     
     togglers.forEach((toggler) => {
       const elem = toggler.parentNode;

@@ -3,25 +3,10 @@
  */
 
 .nav {
-  &__sitebrand {
-    width: 9rem;
-    margin: 0 auto space(3);
-  }
+  list-style: none;
+  padding: 0;
 
-  &__heading {
-    padding: 0 #{space(3) + space()};
-    color: $themeColor;
-    font-size: 0.75rem;
-  }
-
-  &__subHeading {
-    margin: space(3) 0 space();
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 0.875rem;
-  }
-
-  &__mainMenu, &__subMenu {
+  &__subMenu {
     list-style: none;
     padding: 0;
   }
@@ -116,6 +101,13 @@
       opacity: 1;
       transition: opacity ease-in-out 0.15s 0.2s;
     }
+  }
+
+  &__subHeading {
+    margin: space(3) 0 space();
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.875rem;
   }
 
   &__button {
