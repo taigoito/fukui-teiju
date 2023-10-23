@@ -9,6 +9,7 @@
   }
 
   &__heading {
+    padding: 0 #{space(3) + space()};
     color: $themeColor;
     font-size: 0.75rem;
   }
@@ -23,14 +24,6 @@
   &__mainMenu, &__subMenu {
     list-style: none;
     padding: 0;
-  }
-
-  &__mainMenu {
-
-  }
-
-  &__subMenu {
-
   }
 
   &__mainMenuItem, &__subMenuItem {
@@ -51,6 +44,7 @@
 
   &__mainMenuItem {
     margin-bottom: space();
+    padding: 0 #{space(3) + space()};
 
     a {
       color: var(--default-foreground);
@@ -61,7 +55,7 @@
         background: url("./assets/icon_more.svg") no-repeat 50% 50% /contain scroll;
       }
 
-      &:hover {
+      &:hover, &.--active {
         color: $themeColor;
 
         &::after {
@@ -99,16 +93,28 @@
     left: 100%;
     bottom: 0;
     z-index: 1000;
-    display: none;
-    width: 16.5rem;
+    display: block;
+    width: 0;
     height: calc(100% - space(5));
     margin: auto;
-    padding: space() #{space(3) + space()} #{space(3) + space()};
     border-radius: 0 space(3) space(3) 0;
     background-color: $themeColor;
+    overflow: hidden;
+    transition: all ease-in-out 0.35s;
 
     &:not(.--collapse) {
-      display: block;
+      width: 16.5rem;
+    }
+  }
+
+  &__subMenuInner {
+    padding: space() #{space(3) + space()} #{space(3) + space()};
+    opacity: 0;
+    transition: opacity ease-in-out 0.15s;
+
+    &:not(.--collapse) {
+      opacity: 1;
+      transition: opacity ease-in-out 0.15s 0.2s;
     }
   }
 

@@ -7,6 +7,9 @@
 //import BackToTop from './_backToTop.js';
 new BackToTop();
 
+//import MainMenu from './_mainMenu.js';
+new MainMenu();
+
 //import Slider from './_slider.js';
 new Slider();
 

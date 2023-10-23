@@ -229,7 +229,7 @@ button, input, select, textarea {
   position: relative;
   display: none;
   width: 15rem;
-  padding: 2.25rem;
+  padding: 2.25rem 0;
   border-radius: 1.5rem;
   background-color: #ffffff;
 }
@@ -247,6 +247,7 @@ button, input, select, textarea {
   margin: 0 auto 1.5rem;
 }
 .nav__heading {
+  padding: 0 2.25rem;
   color: #ed7475;
   font-size: 0.75rem;
 }
@@ -274,6 +275,7 @@ button, input, select, textarea {
 }
 .nav__mainMenuItem {
   margin-bottom: 0.75rem;
+  padding: 0 2.25rem;
 }
 .nav__mainMenuItem a {
   color: var(--default-foreground);
@@ -283,10 +285,10 @@ button, input, select, textarea {
 .nav__mainMenuItem a::after {
   background: url("./assets/icon_more.svg") no-repeat 50% 50%/contain scroll;
 }
-.nav__mainMenuItem a:hover {
+.nav__mainMenuItem a:hover, .nav__mainMenuItem a.--active {
   color: #ed7475;
 }
-.nav__mainMenuItem a:hover::after {
+.nav__mainMenuItem a:hover::after, .nav__mainMenuItem a.--active::after {
   background: url("./assets/icon_more_hover2.svg") no-repeat 50% 50%/contain scroll;
 }
 .nav__subMenuItem {
@@ -312,16 +314,26 @@ button, input, select, textarea {
   left: 100%;
   bottom: 0;
   z-index: 1000;
-  display: none;
-  width: 16.5rem;
+  display: block;
+  width: 0;
   height: calc(100% - 6rem);
   margin: auto;
-  padding: 0.75rem 2.25rem 2.25rem;
   border-radius: 0 1.5rem 1.5rem 0;
   background-color: #ed7475;
+  overflow: hidden;
+  transition: all ease-in-out 0.35s;
 }
 .nav__subMenuWrap:not(.--collapse) {
-  display: block;
+  width: 16.5rem;
+}
+.nav__subMenuInner {
+  padding: 0.75rem 2.25rem 2.25rem;
+  opacity: 0;
+  transition: opacity ease-in-out 0.15s;
+}
+.nav__subMenuInner:not(.--collapse) {
+  opacity: 1;
+  transition: opacity ease-in-out 0.15s 0.2s;
 }
 .nav__button {
   display: block;
