@@ -21,6 +21,7 @@
     padding: #{space(3) + space()} 0;
     border-radius: space(3);
     background-color: #ffffff;
+    font-size: 1rem;
 
     @media (min-width: breakpoint("md")) {
       display: block;
