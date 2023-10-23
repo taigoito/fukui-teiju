@@ -479,10 +479,7 @@ button, input, select, textarea {
 }
 .slider__nav {
   list-style: none;
-  position: absolute;
-  top: 6rem;
-  right: 12.5%;
-  display: none;
+  display: flex;
   justify-content: center;
   height: 1rem;
   margin: 1.125rem auto;
@@ -490,7 +487,9 @@ button, input, select, textarea {
 }
 @media (min-width: 900px) {
   .slider__nav {
-    display: flex;
+    position: absolute;
+    top: 6rem;
+    right: 12.5%;
   }
 }
 .slider__navItem {
@@ -572,7 +571,7 @@ button, input, select, textarea {
   }
 }
 .others__banner {
-  flex: 1 1 calc(50% - 0.75rem);
+  flex: 0 1 calc(50% - 0.75rem);
 }
 @media (min-width: 900px) {
   .others__banner {
@@ -652,7 +651,7 @@ button, input, select, textarea {
 .footer__links {
   list-style: none;
   flex: 0 0 100%;
-  padding: 0;
+  padding: 0 0.75rem;
 }
 .footer__link {
   display: inline-block;

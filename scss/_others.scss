@@ -46,7 +46,7 @@
   }
 
   &__banner {
-    flex: 1 1 calc(50% - #{space()});
+    flex: 0 1 calc(50% - #{space()});
   
     @media (min-width: breakpoint()) {
       flex: 0 1 calc(50% - #{space()});

@@ -62,17 +62,16 @@
   
   &__nav {
     list-style: none;
-    position: absolute;
-    top: 6rem;
-    right: 12.5%;
-    display: none;
+    display: flex;
     justify-content: center;
     height: 1rem;
     margin: space(2) auto;
     padding: 0;
 
     @media (min-width: breakpoint()) {
-      display: flex;
+      position: absolute;
+      top: 6rem;
+      right: 12.5%;
     }
   }
 
