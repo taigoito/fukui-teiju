@@ -22,7 +22,7 @@
     gap: space(3);
     padding: 0 space();
 
-    @media (min-width: breakpoint("md")) {
+    @media (min-width: breakpoint()) {
       padding: 0 space(4);
     }
   }
@@ -34,27 +34,25 @@
   &__project {
     flex: 1 1 100%;
 
-    @media (min-width: breakpoint("md")) {
-      flex: 0 1 calc(50% - #{space(3)});
-    }
-
-    @media (min-width: breakpoint("lg")) {
-      body:not(.--large) & {
-        flex: 0 1 31.5rem;
+    @media (min-width: breakpoint()) {
+      html:not(.--large) & {
+        flex: 0 1 calc(50% - #{space(3)});
       }
+    }
+  
+    @media (min-width: breakpoint("lg")) {
+      flex: 0 1 calc(50% - #{space(3)});
     }
   }
 
   &__banner {
-    flex: 1 1 100%;
-
-    @media (min-width: breakpoint("md")) {
+    flex: 1 1 calc(50% - #{space()});
+  
+    @media (min-width: breakpoint()) {
       flex: 0 1 calc(50% - #{space()});
-    }
-
-    @media (min-width: breakpoint("lg")) {
-      body:not(.--large) & {
-        flex: 0 1 21rem;
+      
+      html:not(.--large) & {
+        flex: 0 1 calc(33.33% - #{space() * 2});
       }
     }
   }
@@ -62,14 +60,14 @@
   &__contact {
     flex: 1 1 100%;
 
-    @media (min-width: breakpoint("md")) {
-      flex: 0 1 calc(50% - #{space()});
-    }
-
-    @media (min-width: breakpoint("lg")) {
-      body:not(.--large) & {
-        flex: 0 1 31.5rem;
+    @media (min-width: breakpoint()) {
+      html:not(.--large) & {
+        flex: 0 1 calc(50% - #{space(3)});
       }
+    }
+  
+    @media (min-width: breakpoint("lg")) {
+      flex: 0 1 calc(50% - #{space(3)});
     }
 
     a {

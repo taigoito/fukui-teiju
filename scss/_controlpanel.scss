@@ -3,7 +3,7 @@
  */
 
 .controlpanel {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 900;
@@ -12,7 +12,7 @@
   border-radius: 0 0 0 0.75rem;
   background-color: var(--background-color-1);
 
-  @media (min-width: breakpoint("lg")) {
+  @media (min-width: breakpoint()) {
     display: block;
   }
 

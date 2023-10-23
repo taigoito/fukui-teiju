@@ -8,12 +8,9 @@
   --invert-background-1: #292a31;
   --invert-background-2: #25303d;
   --invert-foreground: #ffffff;
-  --default-font-size: clamp(12px, 1.33vw, 16px);
-  --large-font-size: clamp(15px, 1.67vw, 20px);
   --background-color-1: var(--default-background-1);
   --background-color-2: var(--default-background-2);
   --foreground-color: var(--default-foreground);
-  --root-font-size: var(--default-font-size);
 }
 
 /**
@@ -26,21 +23,17 @@
 }
 
 html {
-  font-size: 3.84vw;
+  font-size: min(3.84vw, 16px);
 }
-@media (min-width: 600px) {
-  html {
-    font-size: 16px;
-  }
+html.--large {
+  font-size: min(4.32vw, 20px);
 }
 @media (min-width: 900px) {
   html {
-    font-size: var(--large-font-size);
+    font-size: clamp(12px, 1.33vw, 16px);
   }
-}
-@media (min-width: 1200px) {
-  html {
-    font-size: var(--root-font-size);
+  html.--large {
+    font-size: clamp(15px, 1.67vw, 20px);
   }
 }
 
@@ -114,7 +107,7 @@ button, input, select, textarea {
 .others__inner, .interview__heading, .footer__copyinner, .footer__inner, .support-work__inner, .support-childcare__inner, .support-live__inner {
   width: min(100%, 1200px);
   margin: auto;
-  padding: 0 clamp(12px, 2%, 24px);
+  padding: 0 clamp(0.75rem, 2%, 1.5rem);
 }
 
 .footer__copyinner, .footer__inner, .support-work__inner, .support-childcare__inner, .support-live__inner {
@@ -179,13 +172,16 @@ button, input, select, textarea {
   flex: 1 1 100%;
 }
 @media (min-width: 900px) {
-  .support-work__listItem, .support-childcare__listItem, .support-live__listItem {
+  html:not(.--large) .support-work__listItem, html:not(.--large) .support-childcare__listItem, html:not(.--large) .support-live__listItem {
     flex: 0 1 calc(50% - 0.75rem);
   }
 }
 @media (min-width: 1200px) {
-  body:not(.--large) .support-work__listItem, body:not(.--large) .support-childcare__listItem, body:not(.--large) .support-live__listItem {
-    flex: 0 1 21rem;
+  .support-work__listItem, .support-childcare__listItem, .support-live__listItem {
+    flex: 0 1 calc(50% - 0.75rem);
+  }
+  html:not(.--large) .support-work__listItem, html:not(.--large) .support-childcare__listItem, html:not(.--large) .support-live__listItem {
+    flex: 0 1 calc(33.33% - 1.5rem);
   }
 }
 .support-work__listItem a, .support-childcare__listItem a, .support-live__listItem a {
@@ -206,15 +202,21 @@ button, input, select, textarea {
  */
 .hero {
   position: relative;
-  height: 100vh;
+  width: 100%;
+  aspect-ratio: 1.6;
   background: url("./assets/main.jpg") no-repeat 50% 50%/cover scroll;
+}
+@media (min-width: 900px) {
+  .hero {
+    height: 100vh;
+  }
 }
 
 /*
  * Control panel
  */
 .controlpanel {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 900;
@@ -223,7 +225,7 @@ button, input, select, textarea {
   border-radius: 0 0 0 0.75rem;
   background-color: var(--background-color-1);
 }
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   .controlpanel {
     display: block;
   }
@@ -420,39 +422,37 @@ button, input, select, textarea {
   flex: 1 1 100%;
 }
 @media (min-width: 900px) {
-  .others__project {
+  html:not(.--large) .others__project {
     flex: 0 1 calc(50% - 1.5rem);
   }
 }
 @media (min-width: 1200px) {
-  body:not(.--large) .others__project {
-    flex: 0 1 31.5rem;
+  .others__project {
+    flex: 0 1 calc(50% - 1.5rem);
   }
 }
 .others__banner {
-  flex: 1 1 100%;
+  flex: 1 1 calc(50% - 0.75rem);
 }
 @media (min-width: 900px) {
   .others__banner {
     flex: 0 1 calc(50% - 0.75rem);
   }
-}
-@media (min-width: 1200px) {
-  body:not(.--large) .others__banner {
-    flex: 0 1 21rem;
+  html:not(.--large) .others__banner {
+    flex: 0 1 calc(33.33% - 1.5rem);
   }
 }
 .others__contact {
   flex: 1 1 100%;
 }
 @media (min-width: 900px) {
-  .others__contact {
-    flex: 0 1 calc(50% - 0.75rem);
+  html:not(.--large) .others__contact {
+    flex: 0 1 calc(50% - 1.5rem);
   }
 }
 @media (min-width: 1200px) {
-  body:not(.--large) .others__contact {
-    flex: 0 1 31.5rem;
+  .others__contact {
+    flex: 0 1 calc(50% - 1.5rem);
   }
 }
 .others__contact a {
@@ -482,12 +482,17 @@ button, input, select, textarea {
 }
 .footer__heading {
   flex: 0 0 100%;
+  padding: 0 0.75rem;
 }
 .footer__heading img {
   width: 9rem;
 }
 .footer__info {
   flex: 0 0 24rem;
+  padding: 0 0.75rem;
+}
+.--large .footer__info {
+  flex: 0 0 100%;
 }
 .footer__info h4 {
   font-size: 1.33rem;

@@ -4,6 +4,11 @@
 
 .hero {
   position: relative;
-  height: 100vh;
+  width: 100%;
+  aspect-ratio: 1.6;
   background: url("./assets/main.jpg") no-repeat 50% 50% / cover scroll;
+
+  @media (min-width: breakpoint("md")) {
+    height: 100vh;
+  }
 }

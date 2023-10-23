@@ -15,6 +15,7 @@
 
   &__heading {
     flex: 0 0 100%;
+    padding: 0 space();
 
     img {
       width: 9rem;
@@ -23,6 +24,11 @@
 
   &__info {
     flex: 0 0 24rem;
+    padding: 0 space();
+
+    .--large & {
+      flex: 0 0 100%;
+    }
 
     h4 {
       font-size: 1.33rem;

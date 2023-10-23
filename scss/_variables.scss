@@ -10,6 +10,16 @@ $invertBg2:      #25303d;
 $invertColor:    #ffffff;
 $themeColor:     #ed7475;
 
+$fontSizes:      (
+  sm:  min(3.84vw, 16px),
+  md:  clamp(12px, 1.33vw, 16px)   // 900px時:12px / 1200px時:16px 
+);
+
+$fontSizesLg:    (
+  sm:  min(4.32vw, 20px),
+  md:  clamp(15px, 1.67vw, 20px)   // 900px時:15px / 1200px時:20px (125%)
+);
+
 $breakpoints:    (
   sm:  600px,
   md:  900px,
@@ -25,8 +35,21 @@ $spacingValues:  (
   6: 12rem
 );
 
+$containerWidth:   min(100%, 1200px); // 1200px 左右24pxずつpaddingで、内寸1152px
+$containerPad:     clamp(0.75rem, 2%, 1.5rem);
+
+// フォントサイズの配列の接頭辞から値を返す関数
+@function fontSize($key: "md") {
+  @return map-get($fontSizes, $key);
+}
+
+// フォントサイズ大の配列の接頭辞から値を返す関数
+@function fontSizeLg($key: "md") {
+  @return map-get($fontSizesLg, $key);
+}
+
 // BPの配列の接頭辞から値を返す関数
-@function breakpoint($key: "lg") {
+@function breakpoint($key: "md") {
   @return map-get($breakpoints, $key);
 }
 
@@ -35,11 +58,6 @@ $spacingValues:  (
   @return map-get($spacingValues, $key);
 }
 
-$defaultFontsize:  clamp(12px, 1.33vw, 16px);
-$largeFontsize:    clamp(15px, 1.67vw, 20px);
-$containerWidth:   min(100%, 1200px); // 左右24pxずつpaddingで、内寸1152px
-$containerPad:     clamp(12px, 2%, 24px);
-
 :root {
   --default-background-1: #{$bodyBg1};
   --default-background-2: #{$bodyBg2};
@@ -47,10 +65,7 @@ $containerPad:     clamp(12px, 2%, 24px);
   --invert-background-1: #{$invertBg1};
   --invert-background-2: #{$invertBg2};
   --invert-foreground: #{$invertColor};
-  --default-font-size: #{$defaultFontsize};
-  --large-font-size: #{$largeFontsize};
   --background-color-1: var(--default-background-1);
   --background-color-2: var(--default-background-2);
   --foreground-color: var(--default-foreground);
-  --root-font-size: var(--default-font-size);
 }

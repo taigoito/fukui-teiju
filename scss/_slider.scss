@@ -71,7 +71,7 @@
     margin: space(2) auto;
     padding: 0;
 
-    @media (min-width: breakpoint("md")) {
+    @media (min-width: breakpoint()) {
       display: flex;
     }
   }

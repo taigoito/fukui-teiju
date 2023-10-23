@@ -9,18 +9,18 @@
 }
 
 html {
-  font-size: 3.84vw;
+  font-size: fontSize("sm");
 
-  @media (min-width: breakpoint("sm")) {
-    font-size: 16px;
+  &.--large {
+    font-size: fontSizeLg("sm");
   }
 
-  @media (min-width: breakpoint("md")) {
-    font-size: var(--large-font-size);
-  }
+  @media (min-width: breakpoint()) {
+    font-size: fontSize();
 
-  @media (min-width: breakpoint("lg")) {
-    font-size: var(--root-font-size);
+    &.--large {
+      font-size: fontSizeLg();
+    }
   }
 }
  

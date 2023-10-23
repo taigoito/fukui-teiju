@@ -7,8 +7,9 @@
 class BackToTop {
 
   constructor() {
-    // ボタン生成
+    // 要素
     this._btn = document.getElementById('backToTop');
+    if (!this._btn) return;
 
     // イベント登録
     this._handleEvents();

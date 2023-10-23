@@ -23,14 +23,12 @@ class TextController {
   _handleEvents() {
     this._btnFontsizeReguler.addEventListener('click', (event) => {
       event.preventDefault();
-      document.documentElement.style.setProperty('--root-font-size', 'var(--default-font-size)');
-      document.body.classList.remove('--large');
+      document.documentElement.classList.remove('--large');
     });
 
     this._btnFontsizeLarge.addEventListener('click', (event) => {
       event.preventDefault();
-      document.documentElement.style.setProperty('--root-font-size', 'var(--large-font-size)');
-      document.body.classList.add('--large');
+      document.documentElement.classList.add('--large');
     });
 
     this._btnColorLight.addEventListener('click', (event) => {
