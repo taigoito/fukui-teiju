@@ -32,12 +32,12 @@ class TextController {
     header.appendChild(this._tooltip);
 
     // 要素
-    this._btnSpeaker = document.querySelectorAll('.btnSpeaker');
-    this._btnFontsizeReguler = document.querySelectorAll('.btnFontsizeReguler');
-    this._btnFontsizeLarge = document.querySelectorAll('.btnFontsizeLarge');
-    this._btnColorLight = document.querySelectorAll('.btnColorLight');
-    this._btnColorDark = document.querySelectorAll('.btnColorDark');
-    this._btnColorVivid = document.querySelectorAll('.btnColorVivid');
+    this._btnSpeaker = document.querySelectorAll('[data-role="btnSpeaker"]');
+    this._btnFontsizeReguler = document.querySelectorAll('[data-role="btnFontsizeReguler"]');
+    this._btnFontsizeLarge = document.querySelectorAll('[data-role="btnFontsizeLarge"]');
+    this._btnColorLight = document.querySelectorAll('[data-role="btnColorLight"]');
+    this._btnColorDark = document.querySelectorAll('[data-role="btnColorDark"]');
+    this._btnColorVivid = document.querySelectorAll('[data-role="btnColorVivid"]');
 
     // 状態
     this._tooltipShown = false;
@@ -54,7 +54,7 @@ class TextController {
 
 
   _handleEvents() {
-    const toggler = document.querySelector('.btnAccessibility');
+    const toggler = document.querySelector('[data-role="btnAccessibility"]');
     toggler.addEventListener('click', (event) => {
       event.preventDefault();
       if (this._tooltipShown) {
