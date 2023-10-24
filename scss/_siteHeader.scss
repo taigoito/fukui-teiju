@@ -1,0 +1,52 @@
+/*
+ * Site Header
+ */
+
+.siteHeader {
+  @extend %__siteHeader;
+    height: auto; // デスクトップ用
+    min-height: 18rem; // モバイル用
+
+  &__mobileHeader {
+    @extend %__mobileHeader;
+  }
+
+  &__inner {
+    @extend %__headerInner;
+    top: 0;
+    bottom: auto;
+    padding-left: $containerPad;
+    background-color: $themeColor;
+    color: #ffffff;
+
+    @media (min-width: breakpoint()) {
+      height: 62.5%;
+    }
+  }
+
+  &__heading {
+    @media (min-width: breakpoint()) {
+      margin-left: 19.5rem;
+    }
+  }
+
+  &__nav {
+    @extend %__headerNav;
+  }
+
+  &__sitebrand {
+    @extend %__sitebrand;
+  }
+
+  &__controlpanel {
+    @extend %__controlpanel;
+  }
+
+  &__accessibility {
+    @extend %__accessibility;
+  }
+
+  &__navheading {
+    @extend %__navheading;
+  }
+}

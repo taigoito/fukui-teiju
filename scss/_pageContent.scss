@@ -1,0 +1,15 @@
+/*
+ * Page Content
+ */
+
+.pageContent {
+  @extend %__container;
+  position: relative;
+  padding-bottom: space(6);
+
+  @media (min-width: breakpoint()) {
+    width: min(66.67%, 1200px);
+    margin-top: -9rem;
+    margin-left: 19.5rem; // .siteHeader__headingと同じ分
+  }
+}

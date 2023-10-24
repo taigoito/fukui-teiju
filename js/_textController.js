@@ -28,7 +28,7 @@ class TextController {
     this._importMenu(menus);
 
     // .hero__mobileHeader要素に挿入
-    const header = document.querySelector('.hero__mobileHeader');
+    const header = document.querySelector('[data-role="mobileHeader"]');
     header.appendChild(this._tooltip);
 
     // 要素

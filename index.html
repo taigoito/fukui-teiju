@@ -8,11 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="./favicon.ico">
   </head>
-  <body>
+  <body id="top">
     <header id="hero" class="hero">
-      <div class="hero__mobileHeader">
+      <div class="hero__mobileHeader" data-role="mobileHeader">
         <div class="hero__sitebrand --mobile">
           <img src="./assets/logo_teiju.svg">
         </div>
@@ -21,132 +21,131 @@
           <img src="./assets/icon_accessibility.svg">
         </div>
       </div>
-      <div class="hero__inner">
-        <nav class="hero__nav">
-          <h1 class="hero__sitebrand">
-            <img src="./assets/logo_teiju.svg">
-          </h1>
-          <h2 class="hero__navheading">各種支援メニュー</h2>
-          <ul class="nav">
-            <li class="nav__mainMenuItem"><a href="#" data-toggle="submenu">福井で暮らす</a>
-              <div class="nav__subMenuWrap --collapse" data-role="submenu">
-                <div class="nav__subMenuInner --collapse">
-                  <h3 class="nav__subHeading">見出しが入ります</h3>
-                  <ul class="nav__subMenu">
-                    <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
-                  </ul>
-                  <h3 class="nav__subHeading">見出しが入ります</h3>
-                  <ul class="nav__subMenu">
-                    <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
-                    <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
-                    <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
-                  </ul>
-                  <h3 class="nav__subHeading">見出しが入ります</h3>
-                  <ul class="nav__subMenu">
-                    <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
-                    <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
-                    <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
-                  </ul>
-                </div>
+      <nav class="hero__nav">
+        <h1 class="hero__sitebrand">
+          <img src="./assets/logo_teiju.svg">
+        </h1>
+        <h2 class="hero__navheading">各種支援メニュー</h2>
+        <ul class="nav">
+          <li class="nav__mainMenuItem"><a href="#" data-toggle="submenu">福井で暮らす</a>
+            <div class="nav__subMenuWrap --collapse" data-role="submenu">
+              <div class="nav__subMenuInner --collapse">
+                <h3 class="nav__subHeading">見出しが入ります</h3>
+                <ul class="nav__subMenu">
+                  <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
+                </ul>
+                <h3 class="nav__subHeading">見出しが入ります</h3>
+                <ul class="nav__subMenu">
+                  <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
+                  <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
+                  <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
+                </ul>
+                <h3 class="nav__subHeading">見出しが入ります</h3>
+                <ul class="nav__subMenu">
+                  <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
+                  <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
+                  <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
+                </ul>
               </div>
-            </li>
-            <li class="nav__mainMenuItem"><a href="#" data-toggle="submenu">福井で子育て</a>
-              <div class="nav__subMenuWrap --collapse" data-role="submenu">
-                <div class="nav__subMenuInner --collapse">
-                  <h3 class="nav__subHeading">見出しが入ります</h3>
-                  <ul class="nav__subMenu">
-                    <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
-                  </ul>
-                  <h3 class="nav__subHeading">見出しが入ります</h3>
-                  <ul class="nav__subMenu">
-                    <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
-                    <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
-                  </ul>
-                </div>
+            </div>
+          </li>
+          <li class="nav__mainMenuItem"><a href="#" data-toggle="submenu">福井で子育て</a>
+            <div class="nav__subMenuWrap --collapse" data-role="submenu">
+              <div class="nav__subMenuInner --collapse">
+                <h3 class="nav__subHeading">見出しが入ります</h3>
+                <ul class="nav__subMenu">
+                  <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
+                </ul>
+                <h3 class="nav__subHeading">見出しが入ります</h3>
+                <ul class="nav__subMenu">
+                  <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
+                  <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
+                </ul>
               </div>
-            </li>
-            <li class="nav__mainMenuItem"><a href="#" data-toggle="submenu">福井で働く</a>
-              <div class="nav__subMenuWrap --collapse" data-role="submenu">
-                <div class="nav__subMenuInner --collapse">
-                  <h3 class="nav__subHeading">就職支援</h3>
-                  <ul class="nav__subMenu">
-                    <li class="nav__subMenuItem"><a href="#">就職支援事業「週末就活」</a></li>
-                  </ul>
-                  <h3 class="nav__subHeading">起業支援</h3>
-                  <ul class="nav__subMenu">
-                    <li class="nav__subMenuItem"><a href="#">創業支援資金</a></li>
-                    <li class="nav__subMenuItem"><a href="#">熱意ある創業支援事業</a></li>
-                    <li class="nav__subMenuItem"><a href="#">中心市街地オフィス立地助成金</a></li>
-                  </ul>
-                  <h3 class="nav__subHeading">農林漁業への就業支援</h3>
-                  <ul class="nav__subMenu">
-                    <li class="nav__subMenuItem"><a href="#">新規就農支援</a></li>
-                    <li class="nav__subMenuItem"><a href="#">林業への就業支援</a></li>
-                    <li class="nav__subMenuItem"><a href="#">漁業への就業支援</a></li>
-                  </ul>
-                </div>
+            </div>
+          </li>
+          <li class="nav__mainMenuItem"><a href="#" data-toggle="submenu">福井で働く</a>
+            <div class="nav__subMenuWrap --collapse" data-role="submenu">
+              <div class="nav__subMenuInner --collapse">
+                <h3 class="nav__subHeading">就職支援</h3>
+                <ul class="nav__subMenu">
+                  <li class="nav__subMenuItem"><a href="#">就職支援事業「週末就活」</a></li>
+                </ul>
+                <h3 class="nav__subHeading">起業支援</h3>
+                <ul class="nav__subMenu">
+                  <li class="nav__subMenuItem"><a href="#">創業支援資金</a></li>
+                  <li class="nav__subMenuItem"><a href="#">熱意ある創業支援事業</a></li>
+                  <li class="nav__subMenuItem"><a href="#">中心市街地オフィス立地助成金</a></li>
+                </ul>
+                <h3 class="nav__subHeading">農林漁業への就業支援</h3>
+                <ul class="nav__subMenu">
+                  <li class="nav__subMenuItem"><a href="#">新規就農支援</a></li>
+                  <li class="nav__subMenuItem"><a href="#">林業への就業支援</a></li>
+                  <li class="nav__subMenuItem"><a href="#">漁業への就業支援</a></li>
+                </ul>
               </div>
-            </li>
-            <li class="nav__mainMenuItem"><a href="#" data-toggle="submenu">移住者インタビュー</a>
-              <div class="nav__subMenuWrap --collapse" data-role="submenu">
-                <div class="nav__subMenuInner --collapse">
-                  <h3 class="nav__subHeading">見出しが入ります</h3>
-                  <ul class="nav__subMenu">
-                    <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
-                    <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
-                  </ul>
-                  <h3 class="nav__subHeading">見出しが入ります</h3>
-                  <ul class="nav__subMenu">
-                    <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
-                    <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
-                  </ul>
-                </div>
+            </div>
+          </li>
+          <li class="nav__mainMenuItem"><a href="#" data-toggle="submenu">移住者インタビュー</a>
+            <div class="nav__subMenuWrap --collapse" data-role="submenu">
+              <div class="nav__subMenuInner --collapse">
+                <h3 class="nav__subHeading">見出しが入ります</h3>
+                <ul class="nav__subMenu">
+                  <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
+                  <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
+                </ul>
+                <h3 class="nav__subHeading">見出しが入ります</h3>
+                <ul class="nav__subMenu">
+                  <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
+                  <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
+                </ul>
               </div>
-            </li>
-            <li class="nav__mainMenuItem"><a href="#" data-toggle="submenu">U・Iターン相談</a>
-              <div class="nav__subMenuWrap --collapse" data-role="submenu">
-                <div class="nav__subMenuInner --collapse">
-                  <h3 class="nav__subHeading">見出しが入ります</h3>
-                  <ul class="nav__subMenu">
-                    <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
-                    <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
-                  </ul>
-                </div>
+            </div>
+          </li>
+          <li class="nav__mainMenuItem"><a href="#" data-toggle="submenu">U・Iターン相談</a>
+            <div class="nav__subMenuWrap --collapse" data-role="submenu">
+              <div class="nav__subMenuInner --collapse">
+                <h3 class="nav__subHeading">見出しが入ります</h3>
+                <ul class="nav__subMenu">
+                  <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
+                  <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
+                </ul>
               </div>
-            </li>
-            <li class="nav__mainMenuItem"><a href="#" data-toggle="submenu">ワークショップ</a>
-              <div class="nav__subMenuWrap --collapse" data-role="submenu">
-                <div class="nav__subMenuInner --collapse">
-                  <h3 class="nav__subHeading">見出しが入ります</h3>
-                  <ul class="nav__subMenu">
-                    <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
-                    <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
-                  </ul>
-                </div>
+            </div>
+          </li>
+          <li class="nav__mainMenuItem"><a href="#" data-toggle="submenu">ワークショップ</a>
+            <div class="nav__subMenuWrap --collapse" data-role="submenu">
+              <div class="nav__subMenuInner --collapse">
+                <h3 class="nav__subHeading">見出しが入ります</h3>
+                <ul class="nav__subMenu">
+                  <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
+                  <li class="nav__subMenuItem"><a href="#">リスト項目が入ります</a></li>
+                </ul>
               </div>
-            </li>
-          </ul>
-          <a href="#" class="nav__button">オンライン移住相談</a>
-        </nav>
-        <div class="hero__controlpanel">
-          <ul class="controlpanel">
-            <li class="controlpanel__controller --speaker">
-              <a href="#" class="controlpanel__span --speaker" data-role="btnSpeaker">音声読み上げ</a>
-            </li>
-            <li class="controlpanel__controller --fontsize">
-              <span class="controlpanel__span --fontsize">文字サイズ</span>
-              <a href="#" class="controlpanel__button --fontsize_reguler" data-role="btnFontsizeReguler">標準</a>
-              <a href="#" class="controlpanel__button --fontsize_large" data-role="btnFontsizeLarge">拡大</a>
-            </li>
-            <li class="controlpanel__controller --color">
-              <span class="controlpanel__span --color">文字色・背景色</span>
-              <a href="#" class="controlpanel__button --color_light" data-role="btnColorLight">黒</a>
-              <a href="#" class="controlpanel__button --color_dark" data-role="btnColorDark">白</a>
-              <a href="#" class="controlpanel__button --color_vivid" data-role="btnColorVivid">黄</a>
-            </li>
-          </ul>
-        </div>
+            </div>
+          </li>
+        </ul>
+        <a href="#" class="nav__button">オンライン移住相談</a>
+      </nav>
+      <div class="hero__controlpanel">
+        <ul class="controlpanel">
+          <li class="controlpanel__controller --speaker">
+            <a href="#" class="controlpanel__span --speaker" data-role="btnSpeaker">音声読み上げ</a>
+          </li>
+          <li class="controlpanel__controller --fontsize">
+            <span class="controlpanel__span --fontsize">文字サイズ</span>
+            <a href="#" class="controlpanel__button --fontsize_reguler" data-role="btnFontsizeReguler">標準</a>
+            <a href="#" class="controlpanel__button --fontsize_large" data-role="btnFontsizeLarge">拡大</a>
+          </li>
+          <li class="controlpanel__controller --color">
+            <span class="controlpanel__span --color">文字色・背景色</span>
+            <a href="#" class="controlpanel__button --color_light" data-role="btnColorLight">黒</a>
+            <a href="#" class="controlpanel__button --color_dark" data-role="btnColorDark">白</a>
+            <a href="#" class="controlpanel__button --color_vivid" data-role="btnColorVivid">黄</a>
+          </li>
+        </ul>
       </div>
+      <div class="hero__inner"></div>
     </header>
     <main>
       <section id="news" class="news">

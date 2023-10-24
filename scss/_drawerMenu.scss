@@ -6,7 +6,7 @@ $breakpoint:           900px !default;
 $primary:              $themeColor !default;
 $drawerAlwaysShown:    false !default;
 $drawerPad:            space(2) !default;
-$drawerHeight:         48px !default;
+$drawerHeight:         3rem !default;
 $drawerMenuBg:         var(--background-color-1) !default;
 $drawerMenuColor:      var(--foreground-color) !default;
 
@@ -86,7 +86,7 @@ $drawerMenuColor:      var(--foreground-color) !default;
     //align-content: center;
     height: 100%;
     margin-bottom: 0;
-    padding-top: calc(2.25rem + 48px);
+    padding-top: calc(#{$drawerPad * 2} + #{$drawerHeight});
     //padding-left: 20%;
     text-align: left;
     opacity: 1;
