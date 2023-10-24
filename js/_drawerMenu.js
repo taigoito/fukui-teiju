@@ -127,6 +127,7 @@ class DrawerMenu {
     // メニューアイテムをインポート
     const mainMenu = document.querySelector('.nav');
     const clone = mainMenu.cloneNode(true);
+    clone.classList.add('--drawermenu');
 
     // 戻るボタンを追加
     const menus = clone.querySelectorAll('.nav__subMenuInner');

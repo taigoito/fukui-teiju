@@ -311,6 +311,21 @@ button, input, select, textarea {
 .--dark .hero__sitebrand.--mobile img, .--vivid .hero__sitebrand.--mobile img {
   filter: invert(1);
 }
+.hero__controlpanel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 900;
+  display: none;
+  padding: 0 1.5rem;
+  border-radius: 0 0 0 0.75rem;
+  background-color: var(--background-color-1);
+}
+@media (min-width: 900px) {
+  .hero__controlpanel {
+    display: block;
+  }
+}
 .hero__accessibility {
   display: inline-block;
   padding: 0.625rem;
@@ -446,6 +461,43 @@ button, input, select, textarea {
 .nav__button:hover {
   opacity: 0.85;
 }
+.nav.--drawermenu {
+  position: relative;
+  flex: 1 1 100%;
+  font-size: 1.2rem;
+  overflow: hidden;
+}
+.--drawermenu .nav__mainMenuItem {
+  border-bottom: 1px solid #cccccc;
+}
+.--drawermenu .nav__mainMenuItem:first-child {
+  border-top: 1px solid #cccccc;
+}
+.--drawermenu .nav__mainMenuItem > a {
+  color: var(--foreground-color);
+}
+.--drawermenu .nav__subMenuItem {
+  border-bottom: 1px solid #ffffff;
+}
+.--drawermenu .nav__subMenuItem:first-child {
+  border-top: 1px solid #ffffff;
+}
+.--drawermenu .nav__subMenuWrap {
+  z-index: 1120;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+.--drawermenu .nav__subMenuWrap:not(.--collapse) {
+  width: 100%;
+  left: 0;
+}
+.--drawermenu .nav__subMenuBack {
+  margin: 1.5rem 0 0.75rem;
+  padding: 0 2.25rem;
+  color: #ffffff;
+  font-size: 0.875em;
+}
 
 /*
  * Drawer Menu
@@ -529,43 +581,6 @@ button, input, select, textarea {
 .drawerMenu__inner.--collapse {
   display: none;
 }
-.drawerMenu .nav {
-  position: relative;
-  flex: 1 1 100%;
-  font-size: 1.2rem;
-  overflow: hidden;
-}
-.drawerMenu .nav__mainMenuItem {
-  border-bottom: 1px solid #cccccc;
-}
-.drawerMenu .nav__mainMenuItem:first-child {
-  border-top: 1px solid #cccccc;
-}
-.drawerMenu .nav__mainMenuItem > a {
-  color: var(--foreground-color);
-}
-.drawerMenu .nav__subMenuItem {
-  border-bottom: 1px solid #ffffff;
-}
-.drawerMenu .nav__subMenuItem:first-child {
-  border-top: 1px solid #ffffff;
-}
-.drawerMenu .nav__subMenuWrap {
-  z-index: 1120;
-  width: 100%;
-  height: 100%;
-  border-radius: 0;
-}
-.drawerMenu .nav__subMenuWrap:not(.--collapse) {
-  width: 100%;
-  left: 0;
-}
-.drawerMenu .nav__subMenuBack {
-  margin: 1.5rem 0 0.75rem;
-  padding: 0 2.25rem;
-  color: #ffffff;
-  font-size: 0.875em;
-}
 
 .drawerMenuOverlay {
   position: fixed;
@@ -586,21 +601,6 @@ button, input, select, textarea {
  * Control panel
  */
 .controlpanel {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 900;
-  display: none;
-  padding: 0 1.5rem;
-  border-radius: 0 0 0 0.75rem;
-  background-color: var(--background-color-1);
-}
-@media (min-width: 900px) {
-  .controlpanel {
-    display: block;
-  }
-}
-.controlpanel__controllers {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -610,6 +610,9 @@ button, input, select, textarea {
   margin: 0.75rem;
   font-weight: 700;
   font-size: 0.75rem;
+}
+.--tooltip .controlpanel__controller {
+  display: block;
 }
 .controlpanel__span::before {
   content: "";
@@ -681,9 +684,6 @@ button, input, select, textarea {
   -webkit-clip-path: polygon(50% 0, 100% 100%, 0 100%);
           clip-path: polygon(50% 0, 100% 100%, 0 100%);
   background-color: var(--background-color-1);
-}
-.tooltip .controlpanel__controller {
-  display: block;
 }
 
 /*

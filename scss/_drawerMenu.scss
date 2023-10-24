@@ -99,52 +99,6 @@ $drawerMenuColor:      var(--foreground-color) !default;
       display: none;
     }
   }
-
-  .nav {
-    position: relative;
-    flex: 1 1 100%;
-    font-size: 1.2rem;
-    overflow: hidden;
-
-    &__mainMenuItem {
-      border-bottom: 1px solid #cccccc;
-
-      &:first-child {
-        border-top: 1px solid #cccccc;
-      }
-
-      & > a {
-        color: $drawerMenuColor;
-      }
-    }
-
-    &__subMenuItem {
-      border-bottom: 1px solid #ffffff;
-
-      &:first-child {
-        border-top: 1px solid #ffffff;
-      }
-    }
-
-    &__subMenuWrap {
-      z-index: 1120;
-      width: 100%;
-      height: 100%;
-      border-radius: 0;
-
-      &:not(.--collapse) {
-        width: 100%;
-        left: 0;
-      }
-    }
-
-    &__subMenuBack {
-      margin: space(3) 0 space();
-      padding: 0 #{space(3) + space()};
-      color: #ffffff;
-      font-size: 0.875em;
-    }
-  }
 }
 
 .drawerMenuOverlay {

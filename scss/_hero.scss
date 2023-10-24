@@ -76,6 +76,21 @@
     }
   }
 
+  &__controlpanel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 900;
+    display: none;
+    padding: 0 1.5rem;
+    border-radius: 0 0 0 0.75rem;
+    background-color: var(--background-color-1);
+
+    @media (min-width: breakpoint()) {
+      display: block;
+    }
+  }
+
   &__accessibility {
     display: inline-block;
     padding: 0.625rem;

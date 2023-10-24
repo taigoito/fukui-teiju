@@ -24,7 +24,7 @@ class TextController {
     this._tooltip.appendChild(this._arrow);
 
     // .controlpanel__controllersから中身をインポート
-    const menus = document.querySelector('.controlpanel__controllers');
+    const menus = document.querySelector('.controlpanel');
     this._importMenu(menus);
 
     // .hero__mobileHeader要素に挿入
@@ -68,6 +68,7 @@ class TextController {
 
   _importMenu(menus) {
     const clone = menus.cloneNode(true);
+    clone.classList.add('--tooltip');
     this._inner.appendChild(clone);
   }
 
