@@ -6,7 +6,7 @@
 
 class DrawerMenu {
 
-  constructor(options = {}) {
+  constructor() {
     // 各要素生成
     // .drawer
     this._drawer = document.createElement('button');
@@ -42,7 +42,7 @@ class DrawerMenu {
     this._overlay = document.createElement('div');
     this._overlay.classList.add('drawerMenuOverlay', '--collapse');
 
-    // body要素に挿入
+    // main要素に挿入
     const main = document.querySelector('main');
     main.appendChild(this._drawer);
     main.appendChild(this._drawerMenu);
@@ -125,10 +125,10 @@ class DrawerMenu {
 
   _importMenu() {
     // メニューアイテムをインポート
-    const mainMenu = document.getElementById('mainMenu');
+    const mainMenu = document.querySelector('.nav');
     const clone = mainMenu.cloneNode(true);
-    clone.id = 'drawerMenu';
 
+    // 戻るボタンを追加
     const menus = clone.querySelectorAll('.nav__subMenuInner');
     menus.forEach((menu) => {
       const backBtn = document.createElement('div');

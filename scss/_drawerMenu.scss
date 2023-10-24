@@ -1,15 +1,14 @@
-/**
- * Component - Drawer Menu
+/*
+ * Drawer Menu
  */
 
 $breakpoint:           900px !default;
 $primary:              $themeColor !default;
-$white:                #ffffff !default;
 $drawerAlwaysShown:    false !default;
 $drawerPad:            space(2) !default;
 $drawerHeight:         48px !default;
-$drawerMenuBg:         $white !default;
-$whiten:               invert(1) grayscale(1) brightness(4) !default;
+$drawerMenuBg:         var(--background-color-1) !default;
+$drawerMenuColor:      var(--foreground-color) !default;
 
 .drawer {
   position: fixed;
@@ -53,7 +52,7 @@ $whiten:               invert(1) grayscale(1) brightness(4) !default;
   }
 
   &__close {
-    color: var(--default-foreground);
+    color: $drawerMenuColor;
     opacity: 1;
     transform: rotate(0);
 
@@ -112,6 +111,10 @@ $whiten:               invert(1) grayscale(1) brightness(4) !default;
 
       &:first-child {
         border-top: 1px solid #cccccc;
+      }
+
+      & > a {
+        color: $drawerMenuColor;
       }
     }
 

@@ -37,6 +37,10 @@
       height: 1.125rem;
       margin-right: 6px;
       vertical-align: sub;
+
+      .--dark &, .--vivid & {
+        filter: invert(1);
+      }
     }
 
     &.--speaker::before {

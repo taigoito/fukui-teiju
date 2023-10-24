@@ -8,7 +8,7 @@ class MainMenu {
 
   constructor() {
     // 設定
-    this._elem = document.getElementById('mainMenu');
+    this._elem = document.querySelector('.nav');
     if (!this._elem) return;
 
     // イベント登録

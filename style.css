@@ -254,7 +254,7 @@ button, input, select, textarea {
   width: 100%;
   height: calc(2.25rem + 48px);
   padding-right: calc(2.25rem + 48px);
-  background-color: var(--default-background-1);
+  background-color: var(--background-color-1);
 }
 @media (min-width: 900px) {
   .hero__mobileHeader {
@@ -302,12 +302,16 @@ button, input, select, textarea {
   width: auto;
   height: calc(1rem + 48px);
 }
+.--dark .hero__sitebrand.--mobile img, .--vivid .hero__sitebrand.--mobile img {
+  filter: invert(1);
+}
 .hero__accessibility {
   display: inline-block;
   padding: 0.625rem;
 }
 .hero__accessibility span {
   display: none;
+  color: var(--foreground-color);
   font-size: 0.875rem;
 }
 @media (min-width: 600px) {
@@ -318,6 +322,9 @@ button, input, select, textarea {
 .hero__accessibility img {
   width: calc(1rem + 32px);
   padding: 0.5rem 0;
+}
+.--dark .hero__accessibility img, .--vivid .hero__accessibility img {
+  filter: invert(1);
 }
 .hero__navheading {
   padding: 0 2.25rem;
@@ -434,8 +441,8 @@ button, input, select, textarea {
   opacity: 0.85;
 }
 
-/**
- * Component - Drawer Menu
+/*
+ * Drawer Menu
  */
 .drawer {
   position: fixed;
@@ -476,7 +483,7 @@ button, input, select, textarea {
 }
 
 .drawer__close {
-  color: var(--default-foreground);
+  color: var(--foreground-color);
   opacity: 1;
   transform: rotate(0);
 }
@@ -494,7 +501,7 @@ button, input, select, textarea {
   width: 100%;
   height: 100%;
   margin: auto;
-  background-color: #ffffff;
+  background-color: var(--background-color-1);
   text-align: center;
   transition: width ease-in-out 0.25s;
 }
@@ -527,6 +534,9 @@ button, input, select, textarea {
 }
 .drawerMenu .nav__mainMenuItem:first-child {
   border-top: 1px solid #cccccc;
+}
+.drawerMenu .nav__mainMenuItem > a {
+  color: var(--foreground-color);
 }
 .drawerMenu .nav__subMenuItem {
   border-bottom: 1px solid #ffffff;
@@ -603,6 +613,9 @@ button, input, select, textarea {
   margin-right: 6px;
   vertical-align: sub;
 }
+.--dark .controlpanel__span::before, .--vivid .controlpanel__span::before {
+  filter: invert(1);
+}
 .controlpanel__span.--speaker::before {
   background: url("./assets/icon_speaker.svg") no-repeat 50% 50%/contain scroll;
 }
@@ -626,6 +639,41 @@ button, input, select, textarea {
   border-color: blue;
   background-color: blue;
   color: yellow;
+}
+
+/*
+ * Tooltip
+ */
+.tooltip {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  right: 3rem;
+  z-index: 900;
+  opacity: 1;
+  transition: opacity 0.35s linear;
+}
+.tooltip:not(.--active) {
+  opacity: 0;
+}
+.tooltip__inner {
+  padding: 0.75rem;
+  border: 1px solid var(--foreground-color);
+  border-radius: 1.5rem;
+  background-color: var(--background-color-1);
+}
+.tooltip__arrow {
+  position: absolute;
+  top: -0.7rem;
+  right: 4.5rem;
+  width: calc(1.6rem / tan(60deg));
+  height: 0.8rem;
+  border-top: 0.8rem solid var(--foreground-color);
+  -webkit-clip-path: polygon(50% 0, 100% 100%, 0 100%);
+          clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background-color: var(--background-color-1);
+}
+.tooltip .controlpanel__controller {
+  display: block;
 }
 
 /*
