@@ -58,12 +58,24 @@
       text-overflow: ellipsis;
       overflow: hidden;
 
+      .--large & {
+        width: 15rem;
+      }
+
       @media (min-width: breakpoint("sm")) {
         width: 30rem;
+
+        .--large & {
+          width: 22.5rem;
+        }
       }
 
       @media (min-width: breakpoint()) {
         width: 40rem;
+
+        .--large & {
+          width: 30rem;
+        }
       }
     }
   }

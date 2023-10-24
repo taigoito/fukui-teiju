@@ -24,6 +24,10 @@ new MainMenu();
 //import Slider from './_slider.js';
 new Slider();
 
+// Tab Panel
+//import Tabpanel from './_tabpanel.js';
+new Tabpanel();
+
 // Text Controller
 //import TextController from './_textController.js';
 new TextController();

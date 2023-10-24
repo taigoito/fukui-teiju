@@ -28,6 +28,7 @@
 
     a {
       display: block;
+      margin-bottom: space() / 2;
       padding: space();
       border-radius: space();
       background-color: #ffffff;
@@ -40,7 +41,6 @@
       }
 
       @media (min-width: breakpoint()) {
-        margin-bottom: space() / 2;
         padding-right: space(3);
         //background-color: transparent;
         text-align: left;
@@ -77,40 +77,51 @@
 
   &__panelItems {
     list-style: none;
+    min-height: 36rem;
     margin: 0;
     padding: 0;
   }
 
-  &__panelItem a {
-    position: relative;
-    display: block;
-    margin-bottom: space();
-    padding: space(3);
-    border-radius: 6px;
-    background-color: #ffffff;
-    color: var(--default-foreground);
-
-    &:hover {
-      transform: translate(-2px, -2px);
-      box-shadow: 2px 2px 6px rgba(0,0,0,.15);
+  &__panelItem {
+    &:not(.--collapse) {
+      display: block;
     }
 
-    @media (min-width: breakpoint("sm")) {
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: space(3);
-        bottom: 0;
-        display: block;
-        width: 1rem;
-        height: 1rem;
-        margin: auto;
-        background: url("./assets/icon_more.svg") no-repeat 50% 50% /contain scroll;
+    &.--collapse {
+      display: none;
+    }
+
+    a {
+      position: relative;
+      display: block;
+      margin-bottom: space();
+      padding: space(3);
+      border-radius: 6px;
+      background-color: #ffffff;
+      color: var(--default-foreground);
+
+      &:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 2px 2px 6px rgba(0,0,0,.15);
       }
 
-      &:hover::after {
-        background: url("./assets/icon_more_hover2.svg") no-repeat 50% 50% /contain scroll;
+      @media (min-width: breakpoint("sm")) {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: space(3);
+          bottom: 0;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          margin: auto;
+          background: url("./assets/icon_more.svg") no-repeat 50% 50% /contain scroll;
+        }
+
+        &:hover::after {
+          background: url("./assets/icon_more_hover2.svg") no-repeat 50% 50% /contain scroll;
+        }
       }
     }
   }
