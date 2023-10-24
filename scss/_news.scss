@@ -3,9 +3,69 @@
  */
 
 .news {
+  position: relative;
+  padding: space(5) 0;
 
   &__inner {
-    
+    @extend %__container;
+  }
+
+  &__heading {
+    @extend %__container;
+    padding: 0 #{space(4) + space(3) + space()};
+  }
+
+  &__info {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: space();
+    font-size: 0.875rem;
+  }
+
+  &__tags {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    gap: space();
+    padding-left: space(3);
+  }
+
+  &__tag {
+    height: 1.5rem;
+    padding: 0 space();
+    border-radius: space();
+    line-height: 1.5rem;
+
+    &.--info {
+      background-color: #fde1b0;
+    }
+
+    &.--event {
+      background-color: #f4d3d4;
+    }
+
+    &.--media {
+      background-color: #c3e6f4;
+    }
+  }
+
+  &__content {
+    p {
+      display: inline-block;
+      width: 20rem;
+      margin: 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      @media (min-width: breakpoint("sm")) {
+        width: 30rem;
+      }
+
+      @media (min-width: breakpoint()) {
+        width: 40rem;
+      }
+    }
   }
 
 }
