@@ -11,7 +11,7 @@ class TextController {
     // .tooltip
     this._tooltip = document.createElement('div');
     this._tooltip.id = 'tooltip';
-    this._tooltip.classList.add('tooltip');
+    this._tooltip.classList.add('tooltip', '--collapse');
 
     // .tooltip__inner
     this._inner = document.createElement('div');
@@ -47,6 +47,25 @@ class TextController {
   }
 
 
+  show() {
+    this._tooltip.classList.remove('--collapse');
+    setTimeout(() => {
+      this._tooltip.classList.add('--active');
+    }, 0);
+    this._tooltipShown = true;
+  }
+
+
+  hide() {
+    this._transitionEnd(this._tooltip, () => {
+      this._tooltip.classList.remove('--active');
+    }).then(() => {
+      this._tooltip.classList.add('--collapse');
+    });
+    this._tooltipShown = false;
+  }
+
+
   _importMenu(menus) {
     const clone = menus.cloneNode(true);
     this._inner.appendChild(clone);
@@ -58,11 +77,9 @@ class TextController {
     toggler.addEventListener('click', (event) => {
       event.preventDefault();
       if (this._tooltipShown) {
-        this._tooltip.classList.remove('--active');
-        this._tooltipShown = false;
+        this.hide();
       } else {
-        this._tooltip.classList.add('--active');
-        this._tooltipShown = true;
+        this.show();
       }
     })
 
@@ -119,10 +136,25 @@ class TextController {
     // スクロール時にツールチップを閉じる
     window.addEventListener('scroll', () => {
       if (this._tooltipShown) {
-        this._tooltip.classList.remove('--active');
-        this._tooltipShown = false;
+        this.hide();
       }
     });
+
+  }
+
+
+  _transitionEnd(elem, func) {
+    // CSS遷移の完了を監視
+    let callback;
+    const promise = new Promise((resolve, reject) => {
+      callback = () => resolve(elem);
+      elem.addEventListener('transitionend', callback);
+    });
+    func();
+    promise.then((elem) => {
+      elem.removeEventListener('transitionend', callback);
+    });
+    return promise;
 
   }
 

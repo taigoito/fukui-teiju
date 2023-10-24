@@ -655,11 +655,15 @@ button, input, select, textarea {
   top: calc(100% + 0.75rem);
   right: 3rem;
   z-index: 900;
+  display: none;
   opacity: 1;
   transition: opacity 0.35s linear;
 }
 .tooltip:not(.--active) {
   opacity: 0;
+}
+.tooltip:not(.--collapse) {
+  display: block;
 }
 .tooltip__inner {
   padding: 0.75rem;
