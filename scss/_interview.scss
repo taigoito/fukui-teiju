@@ -9,7 +9,11 @@
   &__heading {
     @extend %__container;
     margin-bottom: space(4);
-    padding: 0 #{space(4) + space(3) + space()};
+    padding: 0 space(3);
+
+    @media (min-width: breakpoint()) {
+      padding: 0 #{space(4) + space(3) + space()};
+    }
   }
 
 }

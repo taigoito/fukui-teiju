@@ -33,6 +33,7 @@
       border-radius: space();
       background-color: #ffffff;
       color: var(--default-foreground);
+      font-size: 0.875rem;
       text-align: center;
 
       &:hover {
@@ -43,6 +44,7 @@
       @media (min-width: breakpoint()) {
         padding-right: space(3);
         //background-color: transparent;
+        font-size: 1rem;
         text-align: left;
 
         &::after {

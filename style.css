@@ -694,7 +694,13 @@ button, input, select, textarea {
   padding: 6rem 0;
 }
 .news__heading {
-  padding: 0 5.25rem;
+  margin-bottom: 3rem;
+  padding: 0 1.5rem;
+}
+@media (min-width: 900px) {
+  .news__heading {
+    padding: 0 5.25rem;
+  }
 }
 .news__info {
   display: flex;
@@ -787,6 +793,7 @@ button, input, select, textarea {
   border-radius: 0.75rem;
   background-color: #ffffff;
   color: var(--default-foreground);
+  font-size: 0.875rem;
   text-align: center;
 }
 .tabpanel__tab a:hover {
@@ -796,6 +803,7 @@ button, input, select, textarea {
 @media (min-width: 900px) {
   .tabpanel__tab a {
     padding-right: 1.5rem;
+    font-size: 1rem;
     text-align: left;
   }
   .tabpanel__tab a::after {
@@ -871,7 +879,12 @@ button, input, select, textarea {
 }
 .interview__heading {
   margin-bottom: 3rem;
-  padding: 0 5.25rem;
+  padding: 0 1.5rem;
+}
+@media (min-width: 900px) {
+  .interview__heading {
+    padding: 0 5.25rem;
+  }
 }
 
 /**
@@ -934,7 +947,7 @@ button, input, select, textarea {
 @media (min-width: 900px) {
   .slider__nav {
     position: absolute;
-    top: 6rem;
+    top: 0;
     right: 12.5%;
   }
 }
