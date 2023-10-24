@@ -4,12 +4,15 @@
 :root {
   --default-background-1: #faf9f2;
   --default-background-2: #fef3e6;
+  --default-background-3: #ffffff;
   --default-foreground: #242424;
   --invert-background-1: #292a31;
   --invert-background-2: #25303d;
+  --invert-background-3: #242424;
   --invert-foreground: #ffffff;
   --background-color-1: var(--default-background-1);
   --background-color-2: var(--default-background-2);
+  --background-color-3: var(--default-background-3);
   --foreground-color: var(--default-foreground);
 }
 
@@ -282,7 +285,7 @@ button, input, select, textarea {
   width: 15rem;
   padding: 2.25rem 0;
   border-radius: 1.5rem;
-  background-color: #ffffff;
+  background-color: var(--background-color-3);
   font-size: 1rem;
 }
 @media (min-width: 900px) {
@@ -293,6 +296,9 @@ button, input, select, textarea {
 .hero__sitebrand:not(.--mobile) {
   width: 9rem;
   margin: 0 auto 1.5rem;
+}
+.--dark .hero__sitebrand:not(.--mobile) img, .--vivid .hero__sitebrand:not(.--mobile) img {
+  filter: invert(1);
 }
 .hero__sitebrand.--mobile {
   display: inline-block;
@@ -360,7 +366,7 @@ button, input, select, textarea {
   padding: 0.375rem 2.25rem;
 }
 .nav__mainMenuItem a {
-  color: var(--default-foreground);
+  color: var(--foreground-color);
   font-weight: 700;
   font-size: 0.875em;
 }

@@ -41,7 +41,7 @@
     width: 15rem;
     padding: #{space(3) + space()} 0;
     border-radius: space(3);
-    background-color: #ffffff;
+    background-color: var(--background-color-3);
     font-size: 1rem;
 
     @media (min-width: breakpoint("md")) {
@@ -53,6 +53,12 @@
     &:not(.--mobile) {
       width: 9rem;
       margin: 0 auto space(3);
+
+      img {
+        .--dark &, .--vivid & {
+          filter: invert(1);
+        }
+      }
     }
 
     &.--mobile {

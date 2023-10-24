@@ -86,6 +86,7 @@ class TextController {
         event.preventDefault();
         document.documentElement.style.setProperty('--background-color-1', 'var(--default-background-1)');
         document.documentElement.style.setProperty('--background-color-2', 'var(--default-background-2)');
+        document.documentElement.style.setProperty('--background-color-3', 'var(--default-background-3)');
         document.documentElement.style.setProperty('--foreground-color', 'var(--default-foreground)');
         document.documentElement.classList.remove('--dark', '--vivid');
       });
@@ -96,6 +97,7 @@ class TextController {
         event.preventDefault();
         document.documentElement.style.setProperty('--background-color-1', 'var(--invert-background-1)');
         document.documentElement.style.setProperty('--background-color-2', 'var(--invert-background-2)');
+        document.documentElement.style.setProperty('--background-color-3', 'var(--invert-background-3)');
         document.documentElement.style.setProperty('--foreground-color', 'var(--invert-foreground)');
         document.documentElement.classList.remove('--vivid');
         document.documentElement.classList.add('--dark');
@@ -107,6 +109,7 @@ class TextController {
         event.preventDefault();
         document.documentElement.style.setProperty('--background-color-1', 'blue');
         document.documentElement.style.setProperty('--background-color-2', 'blue');
+        document.documentElement.style.setProperty('--background-color-3', 'blue');
         document.documentElement.style.setProperty('--foreground-color', 'yellow');
         document.documentElement.classList.remove('--dark');
         document.documentElement.classList.add('--vivid');

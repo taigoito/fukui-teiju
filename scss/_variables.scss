@@ -4,9 +4,11 @@
 
 $bodyBg1:        #faf9f2;
 $bodyBg2:        #fef3e6;
+$bodyBg3:        #ffffff;
 $bodyColor:      #242424;
 $invertBg1:      #292a31;
 $invertBg2:      #25303d;
+$invertBg3:      #242424;
 $invertColor:    #ffffff;
 $themeColor:     #ed7475;
 
@@ -61,11 +63,14 @@ $containerPad:     clamp(0.75rem, 2%, 1.5rem);
 :root {
   --default-background-1: #{$bodyBg1};
   --default-background-2: #{$bodyBg2};
+  --default-background-3: #{$bodyBg3};
   --default-foreground: #{$bodyColor};
   --invert-background-1: #{$invertBg1};
   --invert-background-2: #{$invertBg2};
+  --invert-background-3: #{$invertBg3};
   --invert-foreground: #{$invertColor};
   --background-color-1: var(--default-background-1);
   --background-color-2: var(--default-background-2);
+  --background-color-3: var(--default-background-3);
   --foreground-color: var(--default-foreground);
 }
