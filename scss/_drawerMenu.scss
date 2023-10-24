@@ -87,7 +87,7 @@ $whiten:               invert(1) grayscale(1) brightness(4) !default;
     //align-content: center;
     height: 100%;
     margin-bottom: 0;
-    padding-top: 4.5rem;
+    padding-top: calc(2.25rem + 48px);
     //padding-left: 20%;
     text-align: left;
     opacity: 1;

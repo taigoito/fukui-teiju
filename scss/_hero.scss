@@ -3,15 +3,36 @@
  */
 
 .hero {
-  position: relative;
-  width: 100%;
-  height: 62.5vw;
-  background: url("./assets/main.jpg") no-repeat 50% 50% / cover scroll;
+  &__mobileHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: calc(2.25rem + 48px);
+    padding-right: calc(2.25rem + 48px);
+    background-color: var(--default-background-1);
 
-  @media (min-width: breakpoint("md")) {
-    height: auto;
-    min-height: 100vh;
-    padding: #{space(3) + space()};
+    @media (min-width: breakpoint("md")) {
+      display: none;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 62.5vw;
+    margin-top: calc(2.25rem + 48px);
+    background: url("./assets/main.jpg") no-repeat 50% 50% / cover scroll;
+
+    @media (min-width: breakpoint("md")) {
+      height: auto;
+      min-height: 100vh;
+      margin-top: 0;
+      padding: #{space(3) + space()};
+    }
   }
 
   &__nav {
@@ -29,8 +50,39 @@
   }
 
   &__sitebrand {
-    width: 9rem;
-    margin: 0 auto space(3);
+    &:not(.--mobile) {
+      width: 9rem;
+      margin: 0 auto space(3);
+    }
+
+    &.--mobile {
+      display: inline-block;
+      padding: 0.625rem;
+
+      img {
+        width: auto;
+        height: calc(1rem + 48px);
+      }
+    }
+  }
+
+  &__accessibility {
+    display: inline-block;
+    padding: 0.625rem;
+
+    span {
+      display: none;
+      font-size: 0.875rem;
+
+      @media (min-width: breakpoint("sm")) {
+        display: inline-block;
+      }
+    }
+
+    img {
+      width: calc(1rem + 32px);
+      padding: 0.5rem 0;
+    }
   }
 
   &__navheading {
