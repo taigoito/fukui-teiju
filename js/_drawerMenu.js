@@ -93,8 +93,32 @@ class DrawerMenu {
         this._menu.classList.add('--collapse');
         this._overlay.classList.add('--collapse');
       });
+
+      // サブメニューも閉じる
+      const menus = this._menu.querySelectorAll('[data-role="submenu"]');
+      menus.forEach((menu) => {
+        this.hideSubMenu(menu);
+      });
     }
     this.isShown = false;
+
+  }
+
+
+  showSubMenu(menu) {
+    // 表示
+    const inner = menu.children[0];
+    inner.classList.remove('--collapse');
+    menu.classList.remove('--collapse');
+
+  }
+
+
+  hideSubMenu(menu) {
+    // 非表示
+    const inner = menu.children[0];
+    inner.classList.add('--collapse');
+    menu.classList.add('--collapse');
 
   }
 
@@ -104,6 +128,14 @@ class DrawerMenu {
     const mainMenu = document.getElementById('mainMenu');
     const clone = mainMenu.cloneNode(true);
     clone.id = 'drawerMenu';
+
+    const menus = clone.querySelectorAll('.nav__subMenuInner');
+    menus.forEach((menu) => {
+      const backBtn = document.createElement('div');
+      backBtn.classList.add('nav__subMenuBack');
+      backBtn.textContent = '戻る';
+      menu.appendChild(backBtn);
+    });
 
     this._menu.appendChild(clone);
   }
@@ -127,6 +159,27 @@ class DrawerMenu {
     // スクロール時のイベント登録
     window.addEventListener('scroll', () => {
       this._windowScrollHandler();
+    });
+
+    // サブメニューを開く
+    const togglers = this._menu.querySelectorAll('[data-toggle="submenu"]');
+    togglers.forEach((toggler) => {
+      const elem = toggler.parentNode;
+
+      toggler.addEventListener('mouseenter', () => {
+        const menu = elem.querySelector('[data-role="submenu"]');
+        this.showSubMenu(menu);
+      });
+    });
+
+    // サブメニューを閉じる
+    const backBtns = this._menu.querySelectorAll('.nav__subMenuBack');
+    backBtns.forEach((backBtn) => {
+      const menu = backBtn.parentNode.parentNode;
+
+      backBtn.addEventListener('mouseenter', () => {
+        this.hideSubMenu(menu);
+      });
     });
 
   }
