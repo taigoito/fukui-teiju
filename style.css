@@ -1157,10 +1157,44 @@ button, input, select, textarea {
 }
 @media (min-width: 900px) {
   .pageContent {
-    width: min(66.67%, 1200px);
-    margin-top: -9rem;
+    width: min(66.67%, 900px);
+    margin-top: -12rem;
     margin-left: 19.5rem;
+    padding-left: clamp(0.75rem, 2%, 1.125rem);
+    padding-left: clamp(0.75rem, 2%, 1.125rem);
   }
+}
+@media (min-width: 1524px) {
+  html:not(.--large) .pageContent {
+    margin-left: auto;
+  }
+}
+@media (min-width: 1680px) {
+  .pageContent {
+    margin-left: auto;
+  }
+}
+.pageContent h3, .pageContent h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.pageContent h5, .pageContent h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.pageContent p {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.pageContent figure {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.pageContent img {
+  border-radius: 1.5rem;
+}
+.pageContent figcaption {
+  text-align: right;
 }
 
 /*

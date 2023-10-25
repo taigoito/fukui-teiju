@@ -8,8 +8,48 @@
   padding-bottom: space(6);
 
   @media (min-width: breakpoint()) {
-    width: min(66.67%, 1200px);
-    margin-top: -9rem;
+    width: min(66.67%, 900px);
+    margin-top: -12rem;
     margin-left: 19.5rem; // .siteHeader__headingと同じ分
+    padding-left: clamp(0.75rem, 2%, 1.125rem);
+    padding-left: clamp(0.75rem, 2%, 1.125rem);
+  }
+
+  @media (min-width: 1524px) { // 900px + 19.5rem * 16px * 2
+    html:not(.--large) & {
+      margin-left: auto;
+    }
+  }
+
+  @media (min-width: 1680px) { // 900px + 19.5rem * 20px * 2
+    margin-left: auto;
+  }
+
+  h3, h4 {
+    margin-top: space(3);
+    margin-bottom: space(3);
+  }
+
+  h5, h6 {
+    margin-top: space(3);
+    margin-bottom: space(3);
+  }
+
+  p {
+    margin-top: space(3);
+    margin-bottom: space(3);
+  }
+
+  figure {
+    margin-top: space(3);
+    margin-bottom: space(3);
+  }
+
+  img {
+    border-radius: space(3);
+  }
+
+  figcaption {
+    text-align: right;
   }
 }
