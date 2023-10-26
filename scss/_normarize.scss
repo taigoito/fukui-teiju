@@ -32,17 +32,20 @@ body {
   font-weight: 400;
   line-height: 1.8;
   -webkit-text-size-adjust: 100%; // Prevent adjustments of font size after orientation changes in iOS
+  transition: font-size linear 0.15s;
 }
 
 a {
   color: var(--foreground-color);
   text-decoration: none;
+  transition: all linear 0.15s;
 }
 
 img {
   width: 100%;
   height: auto;
   vertical-align: middle;
+  transition: all linear 0.15s;
 }
 
 figure {

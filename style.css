@@ -48,17 +48,20 @@ body {
   font-weight: 400;
   line-height: 1.8;
   -webkit-text-size-adjust: 100%;
+  transition: font-size linear 0.15s;
 }
 
 a {
   color: var(--foreground-color);
   text-decoration: none;
+  transition: all linear 0.15s;
 }
 
 img {
   width: 100%;
   height: auto;
   vertical-align: middle;
+  transition: all linear 0.15s;
 }
 
 figure {
@@ -305,6 +308,7 @@ button, input, select, textarea {
   border-radius: 1.5rem;
   background-color: var(--background-color-3);
   font-size: 1rem;
+  transition: all linear 0.15s;
 }
 @media (min-width: 900px) {
   .siteHeader__nav, .hero__nav {
